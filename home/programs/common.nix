@@ -24,8 +24,10 @@
     helix = {
       enable = true;
       defaultEditor = true;
+
       settings = {
         theme = "onedark";
+
         editor = {
           bufferline = "multiple";
           color-modes = true;
@@ -46,6 +48,7 @@
             enable = true;
           };
         };
+
         keys.normal = {
           "A-," = "goto_previous_buffer";
           "A-." = "goto_next_buffer";
@@ -54,10 +57,5 @@
       };
       # languages = {};
     };
-
-    git = {
-      enable = true;
-    };
-    
   };
 }
