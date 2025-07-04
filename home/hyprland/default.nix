@@ -112,20 +112,4 @@
     name = "Bibata-Modern-Classic";
     size = 16;
   };
-
-  # gtk = {
-  #   enable = true;
-
-  #   # theme = {};
-
-  #   iconTheme = {
-  #     package = pkgs.kora-icon-theme;
-  #     name = "kora";
-  #   };
-
-  #   font = {
-  #     name = "Fira Code Nerd Font";
-  #     size = 11;
-  #   };
-  # };
 }
