@@ -19,8 +19,6 @@
     tokei
     ripgrep
 
-    fastfetch
-
     # Programming
     gcc
     rustup
@@ -81,6 +79,30 @@
         };
       };
       # languages = {};
+    };
+
+    fastfetch = {
+      enable = true;
+      settings = {
+        modules = [
+          "title"
+          "separator"
+          "os"
+          "host"
+          "kernel"
+          "uptime"
+          "packages"
+          "shell"
+          "wm"
+          "cpu"
+          "gpu"
+          "memory"
+          "swap"
+          "disk"
+          "break"
+          "colors"
+        ];
+      };
     };
 
     gh = {
