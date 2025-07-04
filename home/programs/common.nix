@@ -36,6 +36,8 @@
     gamemode
     mangohud
     xivlauncher
+
+    anki
   ];
 
   home.sessionVariables = {
