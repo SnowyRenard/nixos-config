@@ -13,6 +13,8 @@
         margin-right = 10;
         spacing = 0;
 
+        include = [./modules.json];
+
         modules-left = [
           "hyprland/workspaces"
         ];
@@ -27,9 +29,10 @@
           "clock"
           "tray"
         ];
+
       };
     };
 
-    style = "./style.css";
+    style = ./style.css;
   };
 }

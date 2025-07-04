@@ -20,6 +20,8 @@
     options = lib.mkDefault "--delete older-than 7d";
   };
 
+  programs.steam.enable = true;
+
   nix.settings.auto-optimise-store = true;
 
   # Allow unfree packages.

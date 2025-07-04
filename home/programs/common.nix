@@ -4,21 +4,46 @@
   ...
 }: {
   home.packages = with pkgs; [
-    # archives
+    # Archives
+    zip
+    unzip
     p7zip
 
-    #utils
-    dust
-    btop
+    # Monotoring
     yazi
-    gitui
+    btop-cuda
+    # nvtopPackages.full
+
+    # Utils
+    dust
     tokei
     ripgrep
 
     fastfetch
 
+    # Programming
+    gcc
+    rustup
+
+    # Git
+    gitui
+
+    # Web Tools
+    curl
+    wget
+    qbittorrent
+    
+    # Games
     discord
+    gamemode
+    mangohud
+    xivlauncher
   ];
+
+  home.sessionVariables = {
+    MANGOHUD = 1;
+    MANGOHUD_CONFIG = "no_display";
+  };
 
   programs = {
     helix = {
@@ -56,6 +81,30 @@
         };
       };
       # languages = {};
+    };
+
+    gh = {
+      enable = true;
+      gitCredentialHelper.enable = true;
+    };
+
+    obs-studio = {
+      enable = true;
+
+    package = (
+      pkgs.obs-studio.override {
+        cudaSupport = true;
+      }
+    );
+
+
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-multi-rtmp
+        obs-pipewire-audio-capture
+        obs-vaapi
+        obs-vkcapture
+      ];
     };
   };
 }

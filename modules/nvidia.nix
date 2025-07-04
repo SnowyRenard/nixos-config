@@ -1,3 +1,4 @@
+# nixos.wiki/wiki/Nvidia
 {
   config,
   pkgs,
