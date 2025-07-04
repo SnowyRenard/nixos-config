@@ -36,6 +36,7 @@
     gamemode
     mangohud
     xivlauncher
+    prismlauncher
 
     anki
   ];
