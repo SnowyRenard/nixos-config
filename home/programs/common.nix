@@ -44,6 +44,7 @@
   home.sessionVariables = {
     MANGOHUD = 1;
     MANGOHUD_CONFIG = "no_display";
+    OBS_VKCAPTURE = 1;
   };
 
   programs = {
@@ -122,14 +123,13 @@
       }
     );
 
-
-      plugins = with pkgs.obs-studio-plugins; [
-        wlrobs
-        obs-multi-rtmp
-        obs-pipewire-audio-capture
-        obs-vaapi
-        obs-vkcapture
-      ];
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-multi-rtmp
+      obs-pipewire-audio-capture
+      obs-vaapi
+      obs-vkcapture
+    ];
     };
   };
 }

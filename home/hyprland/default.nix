@@ -105,6 +105,13 @@
     };
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+    ];
+  };
+
   home.pointerCursor = {
     gtk.enable = true;
     # x11.enable = true;

@@ -9,6 +9,7 @@
     ../../modules/system.nix
     # ../../modules/lvm.nix
     ../../modules/jellyfin.nix
+    ../../modules/hyprland.nix
 
     ../../hardware-configuration.nix
   ];
