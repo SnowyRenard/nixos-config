@@ -4,6 +4,9 @@
   username,
   ...
 }: {
+  hardware.xone.enable = true;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
   users.users.${username} = {
     isNormalUser = true;
     description = username;
@@ -20,7 +23,6 @@
     options = lib.mkDefault "--delete older-than 7d";
   };
 
-  hardware.xone.enable = true;
 
   programs.steam = {
     enable = true;
