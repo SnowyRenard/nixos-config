@@ -5,6 +5,11 @@
 }: {
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  home.file."${config.xdg.configHome}/hypr/swww_randomize.nu" = {
+    source = ./swww_randomize.nu;
+    executable = true;
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -16,6 +21,8 @@
 
       exec-once = [
         "hyprctl setcursor Bibata-Modern-Classic 16"
+        "~/.config/hypr/swww_randomize.nu ~/Pictures/Backgrounds/Art/ 300"
+        "waybar"
       ];
 
       source = [
@@ -109,7 +116,15 @@
 
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
+
+    config = {
+       common.default = ["gtk"];
+       hyprland.default = ["gtk" "hyprland"];
+     };
+
     extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
     ];
   };
