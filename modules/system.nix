@@ -20,6 +20,8 @@
     options = lib.mkDefault "--delete older-than 7d";
   };
 
+  hardware.xone.enable = true;
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
