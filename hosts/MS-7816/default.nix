@@ -7,7 +7,7 @@
     ../../modules/nvidia.nix
 
     ../../modules/system.nix
-    # ../../modules/lvm.nix
+    ../../modules/lvm.nix
     ../../modules/jellyfin.nix
     ../../modules/hyprland.nix
 

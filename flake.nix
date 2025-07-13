@@ -22,7 +22,7 @@
           
           modules = [
             # ./configuration.nix
-            ./hosts/nvidia
+            ./hosts/MS-7816
 
             home-manager.nixosModules.home-manager
             {

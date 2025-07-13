@@ -5,7 +5,7 @@
   ...
 }: {
   hardware.xone.enable = true;
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   users.users.${username} = {
     isNormalUser = true;
