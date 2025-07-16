@@ -11,7 +11,7 @@
 
     # Monotoring
     yazi
-    nvtop
+    nvtopPackages.full
     btop-cuda
     # nvtopPackages.full
 
