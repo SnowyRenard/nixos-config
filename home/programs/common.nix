@@ -11,9 +11,8 @@
 
     # Monotoring
     yazi
-    nvtopPackages.full
     btop-cuda
-    # nvtopPackages.full
+    nvtopPackages.full
 
     # Utils
     dust
@@ -40,6 +39,7 @@
     prismlauncher
 
     anki
+    jellyfin-media-player
   ];
 
   home.sessionVariables = {
