@@ -35,8 +35,8 @@
     discord
     gamemode
     mangohud
-    xivlauncher
-    prismlauncher
+    # xivlauncher
+    # prismlauncher
 
     anki
     jellyfin-media-player
