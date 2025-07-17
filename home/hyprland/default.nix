@@ -12,6 +12,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    systemd.enable = false;
 
     settings = {
       "$mod" = "SUPER";
@@ -22,7 +23,6 @@
       exec-once = [
         "hyprctl setcursor Bibata-Modern-Classic 16"
         "~/.config/hypr/swww_randomize.nu ~/Pictures/Backgrounds/Art/ 300"
-        "waybar"
       ];
 
       source = [
