@@ -1,4 +1,4 @@
-#!/bin/nu
+#!/usr/bin/env nu
 #
 # This script will randomly go through the files of a directory, setting it
 # up as the wallpaper at regular intervals
@@ -19,7 +19,7 @@ def main [dir: path, time: int] {
 # Update the environment based upon the path to an image
 def update_colors [img: path] {  
   [
-    (killall waybar | ignore ; ~/.dotfiles/nushell/.config/nushell/launch waybar | ignore ), # Cause waybar keeps control over the process launch it in a child process through sh
+    (pkill waybar -SIGUSR2 | ignore ;), # Cause waybar keeps control over the process launch it in a child process through sh
     (wallust run $img --quiet -s -d ~/.config/wallust | ignore),
     (magick $img -gravity Center -extent 1.005:1 ~/.cache/rofi.bmp),
     (swww img $img),
