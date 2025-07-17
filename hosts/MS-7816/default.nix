@@ -4,8 +4,6 @@
   ...
 }: {
   imports = [
-    ../../modules/nvidia.nix
-
     ../../modules/system.nix
     ../../modules/lvm.nix
     ../../modules/jellyfin.nix
@@ -23,6 +21,25 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "nixos-desktop";
+
+  # Nvidia Driver
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware = {
+    graphics.enable = true;
+    nvidia = {
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      modesettings.enable = true;
+
+      powerManagement = {
+        enable = true;
+        finegrained = false;
+      };
+
+      open =  false;
+
+      nvidiaSettings = false;
+    };
+  };
 
   system.stateVersion = "25.05";
 }
