@@ -28,7 +28,7 @@
     graphics.enable = true;
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.stable;
-      modesettings.enable = true;
+      modesetting.enable = true;
 
       powerManagement = {
         enable = true;
