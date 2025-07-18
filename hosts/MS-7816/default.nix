@@ -21,6 +21,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "nixos-desktop";
+  services.tailscale.enable = true;
 
   # Nvidia Driver
   services.xserver.videoDrivers = [ "nvidia" ];

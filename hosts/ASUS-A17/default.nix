@@ -6,7 +6,6 @@
   imports = [
     ../../modules/system.nix
     ../../modules/lvm.nix
-    ../../modules/jellyfin.nix
     ../../modules/hyprland.nix
 
     ./hardware-configuration.nix
@@ -21,6 +20,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "nixos-desktop";
+  services.tailscale.enable = true;
 
   # Nvidia Driver
   services.xserver.videoDrivers = [ "nvidia" ];

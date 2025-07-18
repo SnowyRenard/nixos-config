@@ -3,7 +3,6 @@
   username,
   ...
 }: {
-  services.tailscale.enable = true;
 
   nixpkgs.overlays = with pkgs; [
     (
