@@ -1,6 +1,4 @@
 {
-  pkgs,
-  config,
   ...
 }: {
   programs.wallust = {
@@ -17,14 +15,9 @@
       alpha = 75;
 
       templates = {
-        dir.template = "";
+        dir.template = ./templates;
         dir.target = "~/.cache/wallust";
       };
     };
-  };
-
-  home.file."${config.xdg.configHome}/wallust/templates" = {
-    source = ./templates;
-    recursive = true;
   };
 }
