@@ -20,7 +20,6 @@
           system = "x86_64-linux";
           
           modules = [
-            # ./configuration.nix
             ./hosts/MS-7816
 
             home-manager.nixosModules.home-manager
@@ -42,7 +41,6 @@
           system = "x86_64-linux";
           
           modules = [
-            # ./configuration.nix
             ./hosts/ASUS-A17
 
             home-manager.nixosModules.home-manager
