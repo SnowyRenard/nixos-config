@@ -12,6 +12,7 @@
   ];
 
   programs.git = {
+    enable = true;
     userName = "Snowy Renard";
     userEmail = "snowyrenard@gmail.com";
   };
