@@ -136,4 +136,20 @@
     name = "Bibata-Modern-Classic";
     size = 16;
   };
+
+  gtk = {
+    enable = true;
+
+    # theme = {
+      
+    # };
+
+    # iconTheme = {
+      
+    # };
+
+    # font = {
+      
+    # };
+  };
 }
