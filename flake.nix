@@ -11,8 +11,7 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
-      nixos-desktop = let
+    nixosConfigurations.nixos-desktop = let
         username = "snowyrenard";
         specialArgs = { inherit username; };
       in
@@ -34,6 +33,27 @@
             }
           ];
       };
+      nixosConfigurations.nixos-laptop = let
+        username = "snowyrenard";
+        specialArgs = { inherit username; };
+      in
+        nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+          system = "x86_64-linux";
+          
+          modules = [
+            # ./configuration.nix
+            ./hosts/ASUS-A17
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.extraSpecialArgs = inputs // specialArgs;
+              home-manager.users.${username} = import ./users/${username}/home.nix;
+            }
+          ];
     };
   };
 }

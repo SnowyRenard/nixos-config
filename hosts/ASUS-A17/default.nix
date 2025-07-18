@@ -5,7 +5,6 @@
 }: {
   imports = [
     ../../modules/system.nix
-    ../../modules/lvm.nix
     ../../modules/hyprland.nix
 
     ./hardware-configuration.nix
@@ -19,7 +18,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "nixos-desktop";
+  networking.hostName = "nixos-laptop";
   services.tailscale.enable = true;
 
   # Nvidia Driver
