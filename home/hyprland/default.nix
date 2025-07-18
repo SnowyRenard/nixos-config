@@ -14,11 +14,11 @@
     enable = true;
     systemd.enable = false;
 
-    settings = {
+    settings = with pkgs; {
       "$mod" = "SUPER";
-      "$browser" = "firefox";
-      "$terminal" = "kitty -1";
-      "$drun" = "rofi -show drun";
+      "$browser" = "${firefox}/bin/firefox";
+      "$terminal" = "${kitty}/bin/kitty -1";
+      "$drun" = "${rofi}/bin/rofi -show drun";
 
       exec-once = [
         "hyprctl setcursor Bibata-Modern-Classic 16"
