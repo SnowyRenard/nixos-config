@@ -40,6 +40,7 @@
 
     anki
     jellyfin-media-player
+    protonvpn-gui
   ];
 
   home.sessionVariables = {
