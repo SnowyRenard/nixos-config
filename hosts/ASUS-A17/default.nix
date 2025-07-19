@@ -38,6 +38,11 @@
 
       nvidiaSettings = false;
     };
+
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
   };
 
   system.stateVersion = "25.05";

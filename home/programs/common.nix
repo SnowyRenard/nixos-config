@@ -17,6 +17,7 @@
     dust
     tokei
     ripgrep
+    bluetui
 
     # Programming
     gcc
