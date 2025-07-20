@@ -41,6 +41,7 @@
     anki
     jellyfin-media-player
     protonvpn-gui
+    networkmanagerapplet
   ];
 
   home.sessionVariables = {
