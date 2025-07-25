@@ -45,6 +45,8 @@
         layout = "dwindle";
       };
 
+      misc.vfr = true;
+
       decoration = {
         rounding = 10;
 
