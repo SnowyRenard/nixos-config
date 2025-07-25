@@ -22,6 +22,7 @@
     # Programming
     gcc
     rustup
+    cargo-flamegraph
 
     # Git
     gitui
@@ -39,6 +40,7 @@
     # prismlauncher
 
     anki
+    krita
     jellyfin-media-player
     protonvpn-gui
     networkmanagerapplet
