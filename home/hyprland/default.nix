@@ -14,6 +14,7 @@
     enable = true;
     systemd.enable = false;
 
+    # App settings
     settings = with pkgs; {
       "$mod" = "SUPER";
       "$browser" = "${firefox}/bin/firefox";
@@ -45,7 +46,11 @@
         layout = "dwindle";
       };
 
-      misc.vfr = true;
+      # vrr
+      misc = {
+        vfr = true;
+        vrr = 1;
+      };
 
       decoration = {
         rounding = 10;
