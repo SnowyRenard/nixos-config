@@ -8,9 +8,13 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nur, ... }: {
     nixosConfigurations.nixos-desktop = let
         username = "snowyrenard";
         specialArgs = { inherit username; };
@@ -29,6 +33,8 @@
 
               home-manager.extraSpecialArgs = inputs // specialArgs;
               home-manager.users.${username} = import ./users/${username}/home.nix;
+
+              nixpkgs.overlays = [ nur.overlays.default ];
             }
           ];
       };
@@ -50,6 +56,8 @@
 
               home-manager.extraSpecialArgs = inputs // specialArgs;
               home-manager.users.${username} = import ./users/${username}/home.nix;
+
+              nixpkgs.overlays = [ nur.overlays.default ];
             }
           ];
     };
