@@ -40,6 +40,16 @@
             definedAliases = [ "@no" ];
           };
 
+          nix-wiki= {
+            name = "Nix Wiki";
+            urls = [{
+              template = "https://nixos.wiki/wiki/{searchTerms}";
+            }];
+
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@nw" ];
+          };
+
           youtube = {
             name = "Youtube";
             urls = [{
@@ -52,7 +62,7 @@
             definedAliases = [ "@yt" ];
           };
 
-          wallhave= {
+          wallhaven = {
             name = "Wallhaven";
             urls = [{
               template = "https://wallhaven.cc/search";
