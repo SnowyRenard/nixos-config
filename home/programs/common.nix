@@ -36,8 +36,8 @@
     discord
     gamemode
     mangohud
-    # xivlauncher
-    # prismlauncher
+    xivlauncher
+    prismlauncher
 
     anki
     krita
