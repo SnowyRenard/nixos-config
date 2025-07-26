@@ -31,6 +31,8 @@
       ];
 
       input = {
+        follow_mouse = 2;
+        
         kb_layout = "us, us";
         kb_variant = " , colemak_dh";
         kb_options = "grp:win_space_toggle";
