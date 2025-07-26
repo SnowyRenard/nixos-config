@@ -11,6 +11,7 @@
       profiles.${username} = {
         isDefault = true;
 
+        search.force = true;
         search.engines = {
           nix-packages = {
             name = "Nix Packages";
