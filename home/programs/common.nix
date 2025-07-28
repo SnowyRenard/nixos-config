@@ -41,6 +41,7 @@
 
     anki
     krita
+    obsidian
     jellyfin-media-player
     protonvpn-gui
     networkmanagerapplet
