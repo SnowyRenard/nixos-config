@@ -1,11 +1,11 @@
 {
   config,
-  pkgs,
   ...
 }: {
   imports = [
     ../../modules/system.nix
     ../../modules/hyprland.nix
+    ../../modules/bluetooth.nix
 
     ./hardware-configuration.nix
   ];
@@ -37,11 +37,6 @@
       open =  true;
 
       nvidiaSettings = false;
-    };
-
-    bluetooth = {
-      enable = true;
-      powerOnBoot = true;
     };
   };
 

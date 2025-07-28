@@ -17,7 +17,6 @@
     dust
     tokei
     ripgrep
-    bluetui
 
     # Programming
     gcc
@@ -30,7 +29,6 @@
     # Web Tools
     curl
     wget
-    qbittorrent
     
     # Games
     discord
@@ -39,12 +37,13 @@
     xivlauncher
     prismlauncher
 
-    anki
+    # Productivity
     krita
     obsidian
+    davinci-resolve
+
+    anki
     jellyfin-media-player
-    protonvpn-gui
-    networkmanagerapplet
   ];
 
   home.sessionVariables = {

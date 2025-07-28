@@ -4,7 +4,7 @@
   ...
 }: {
 
-  nixpkgs.overlays = with pkgs; [
+  nixpkgs.overlays = [
     (
       final: prev:
         {
@@ -32,8 +32,16 @@
     user = "${username}";
   };
   environment.systemPackages = with pkgs; [
+    # Server
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
+
+    # Torrent
+    qbittorent
+
+    # VPN
+    protonvpn-gui
+    networkmanagerapplet
   ];
 }
