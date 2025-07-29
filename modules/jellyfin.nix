@@ -38,7 +38,7 @@
     jellyfin-ffmpeg
 
     # Torrent
-    qbittorent
+    qbittorrent
 
     # VPN
     protonvpn-gui
