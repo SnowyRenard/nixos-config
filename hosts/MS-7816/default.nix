@@ -1,12 +1,10 @@
-{
-  config,
-  ...
-}: {
+{ ... }: {
   imports = [
     ../../modules/system.nix
     ../../modules/lvm.nix
     ../../modules/jellyfin.nix
     ../../modules/hyprland.nix
+    ../../modules/nvidia.nix
 
     ./hardware-configuration.nix
   ];
@@ -23,23 +21,7 @@
   services.tailscale.enable = true;
 
   # Nvidia Driver
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware = {
-    graphics.enable = true;
-    nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-      modesetting.enable = true;
-
-      powerManagement = {
-        enable = true;
-        finegrained = false;
-      };
-
-      open =  false;
-
-      nvidiaSettings = false;
-    };
-  };
+  hardware.nvidia.open = false;
 
   system.stateVersion = "25.05";
 }

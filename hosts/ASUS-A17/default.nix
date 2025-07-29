@@ -1,11 +1,10 @@
-{
-  config,
-  ...
-}: {
+{ ... }: {
   imports = [
     ../../modules/system.nix
     ../../modules/hyprland.nix
     ../../modules/bluetooth.nix
+    ../../modules/nvidia.nix
+    ../../modules/amd.nix
 
     ./hardware-configuration.nix
   ];
@@ -22,23 +21,7 @@
   services.tailscale.enable = true;
 
   # Nvidia Driver
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware = {
-    graphics.enable = true;
-    nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-      modesetting.enable = true;
-
-      powerManagement = {
-        enable = true;
-        finegrained = false;
-      };
-
-      open =  true;
-
-      nvidiaSettings = false;
-    };
-  };
+  hardware.nvidia.open =  true;
 
   system.stateVersion = "25.05";
 }
