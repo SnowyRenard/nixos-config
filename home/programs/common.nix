@@ -17,6 +17,7 @@
     dust
     tokei
     ripgrep
+    pipe-rename
 
     # Programming
     gcc
