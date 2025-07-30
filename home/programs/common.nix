@@ -40,7 +40,7 @@
     # Productivity
     krita
     obsidian
-    davinci-resolve
+    # davinci-resolve
 
     nvidia_oc
     anki
@@ -92,22 +92,22 @@
       gitCredentialHelper.enable = true;
     };
 
-    obs-studio = {
-      enable = true;
+    # obs-studio = {
+    #   enable = true;
 
-    package = (
-      pkgs.obs-studio.override {
-        cudaSupport = true;
-      }
-    );
+    #   package = (
+    #     pkgs.obs-studio.override {
+    #       cudaSupport = true;
+    #     }
+    #   );
 
-    plugins = with pkgs.obs-studio-plugins; [
-      wlrobs
-      obs-multi-rtmp
-      obs-pipewire-audio-capture
-      obs-vaapi
-      obs-vkcapture
-    ];
-    };
+    #   plugins = with pkgs.obs-studio-plugins; [
+    #     wlrobs
+    #     obs-multi-rtmp
+    #     obs-pipewire-audio-capture
+    #     obs-vaapi
+    #     obs-vkcapture
+    #   ];
+    # };
   };
 }
