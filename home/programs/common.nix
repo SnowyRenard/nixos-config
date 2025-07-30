@@ -34,7 +34,6 @@
     # Games
     discord
     gamemode
-    mangohud
     xivlauncher
     prismlauncher
 
@@ -43,13 +42,12 @@
     obsidian
     davinci-resolve
 
+    nvidia_oc
     anki
     jellyfin-media-player
   ];
 
   home.sessionVariables = {
-    MANGOHUD = 1;
-    MANGOHUD_CONFIG = "no_display";
     OBS_VKCAPTURE = 1;
   };
 
@@ -75,6 +73,17 @@
           "break"
           "colors"
         ];
+      };
+    };
+
+    mangohud = {
+      enable = true;
+      enableSessionWide = true;
+
+      settings = {
+        no_display = true;
+        preset = 3;
+        full = true;
       };
     };
 
