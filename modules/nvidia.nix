@@ -12,6 +12,8 @@
         finegrained = false;
       };
 
+      dynamicBoost.enable = true;
+
       nvidiaSettings = false;
     };
   };

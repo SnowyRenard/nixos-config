@@ -20,6 +20,8 @@
   networking.hostName = "nixos-laptop";
   services.tailscale.enable = true;
 
+  services.power-profiles-daemon.enable = true;
+
   # Nvidia Driver
   hardware.nvidia.open =  true;
 
