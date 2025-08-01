@@ -6,7 +6,7 @@
       show_banner = false;
     };
     shellAliases = {
-      clear = "clr";
+      clr = "clear";
       fetch = "fastfetch";
     };
   };
