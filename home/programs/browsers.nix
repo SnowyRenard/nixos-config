@@ -138,7 +138,6 @@
             {
               name = "jisho";
               url = "https://jisho.org";
-              toolbar = true;
             }
           ];
         };
