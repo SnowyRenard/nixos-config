@@ -59,6 +59,28 @@
             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@nw" ];
           };
+          
+          home-manager-Options = {
+           name = "Home Manager Options";
+           urls = [{
+             template = "https://home-manager-options.extranix.com/{searchTerms}";
+             params = [
+               { name = "query"; value = "{searchTerms}"; }
+             ];
+           }];
+
+           icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+           definedAliases = [ "@hm" ];
+          };
+
+          jisho = {
+            name = "Jisho";
+            urls = [{
+              template = "https://jisho.org/search/{searchTerms}";
+            }];
+
+            definedAlias = [ "@js" ];
+          };
 
           youtube = {
             name = "Youtube";
@@ -83,6 +105,11 @@
 
             definedAliases = [ "@wh" ];
           };
+        };
+
+        bookmarks = {
+          force = true;
+          settings = [];
         };
       };
     };
