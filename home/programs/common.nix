@@ -10,8 +10,8 @@
 
     # Monotoring
     yazi
-    btop-cuda
-    nvtopPackages.full
+    btop-rocm
+    nvtopPackages.amd
 
     # Utils
     dust
@@ -42,8 +42,10 @@
     obsidian
     # davinci-resolve
 
-    nvidia_oc
+    # Study
     anki
+
+    # Media
     jellyfin-media-player
   ];
 
