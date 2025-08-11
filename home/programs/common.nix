@@ -93,19 +93,12 @@
     };
 
     obs-studio = {
-      # enable = true;
-
-      package = (
-        pkgs.obs-studio.override {
-          cudaSupport = true;
-        }
-      );
+      enable = true;
 
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
         obs-multi-rtmp
         obs-pipewire-audio-capture
-        obs-vaapi
         obs-vkcapture
       ];
     };
