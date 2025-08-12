@@ -5,6 +5,7 @@
   ...
 }: {
   hardware.xone.enable = true;
+  hardware.opentabletdriver.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   users.users.${username} = {
@@ -22,7 +23,7 @@
     dates = lib.mkDefault "weekly";
     options = lib.mkDefault "--delete older-than 7d";
   };
-
+  nix.settings.auto-optimise-store = true;
 
   programs.steam = {
     enable = true;
@@ -30,8 +31,6 @@
     localNetworkGameTransfers.openFirewall = true;
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
   };
-
-  nix.settings.auto-optimise-store = true;
 
   # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
