@@ -51,6 +51,7 @@
 
   home.sessionVariables = {
     OBS_VKCAPTURE = 1;
+    FSR4_UPGRADE = 1; # proton-ge overwrite fsr3 to fsr4
   };
 
   programs = {
