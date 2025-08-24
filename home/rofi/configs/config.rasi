@@ -3,8 +3,6 @@
 configuration {
 	modi: "drun";
     show-icons: true;
-    // terminal: "footclient";
-    terminal: "kitty --single-instance";
 }
 
 // Global Properties //
