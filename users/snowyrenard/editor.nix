@@ -2,6 +2,8 @@
   pkgs,
   ...
 }: {
+  home.sessionVariables.EDITOR = "hx";
+
   home.packages = with pkgs; [
     nil
     markdown-oxide
