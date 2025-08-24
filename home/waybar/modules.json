@@ -20,10 +20,10 @@
   },
 
   "backlight": {
-    "format": "{percent}% {icon}",
+    "format": "{icon}",
     "format-icons": [ "", "", "", "", "", "", "", "", "", ],
     // "scroll-step": 5,
-    "tooltip": false,
+    "tooltip-format": "{percent}%"
   },
 
   "backlight/slider": {
@@ -38,11 +38,11 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
+    "format": "{icon}",
     "format-charging": "{capacity}% 󱐋",
     "format-plugged": "{capacity}% ",
     "format-icons": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹", ],
-    "tooltip-format": "{time}",
+    "tooltip-format": "{capacity}%",
   },
 
   "network": {
@@ -54,11 +54,12 @@
   },
 
   "pulseaudio": {
-    "format": "{volume}% {icon}",
+    "format": "{icon}",
     "format-bluetooth": "{icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-icons": { "default": [ "", "", "", ], },
+    "tooltip-format": "{volume}%",
     "on-click": "kitty --single-instance wiremix"
   },
 
