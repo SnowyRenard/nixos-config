@@ -9,7 +9,7 @@
     # Monotoring
     yazi
     btop-rocm
-    nvtopPackages.amd
+    nvtopPackages.full
 
     # Utils
     dust
