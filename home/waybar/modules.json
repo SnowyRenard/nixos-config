@@ -12,19 +12,6 @@
     "seperate-outputs": true,
   },
 
-  "sway/workspaces": {
-    "on-click": "activate",
-    "active-only": false,
-    "all-outputs": true,
-    "formats": "{id}",
-    "max-length": 1,
-  },
-
-  "sway/window": {
-    "max-length": 200,
-    "seperate-outputs": true,
-  },
-
   "tray": { "spacing": 10, },
 
   "clock": {
@@ -33,9 +20,8 @@
   },
 
   "backlight": {
-    "format": "{icon}",
+    "format": "{percent}% {icon}",
     "format-icons": [ "", "", "", "", "", "", "", "", "", ],
-    "format-alt": "{percent}% {icon}",
     // "scroll-step": 5,
     "tooltip": false,
   },
@@ -52,32 +38,28 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}",
+    "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% 󱐋",
     "format-plugged": "{capacity}% ",
-    "format-alt": "{capacity}% {icon}",
     "format-icons": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹", ],
-    "tooltip": true,
     "tooltip-format": "{time}",
   },
 
   "network": {
     "format-wifi": "",
     "format-ethernet": "",
-    "format-alt": "{signalStrength}% ",
     "format-disconnected": "",
     "tooltip-format-wifi": "{essid}",
-    "tooltip": false,
+    "on-click": "kitty --single-instance nmtui"
   },
 
   "pulseaudio": {
-    "format": "{icon}",
-    "format-alt": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-icons": { "default": [ "", "", "", ], },
-    "tooltip": false,
+    "on-click": "kitty --single-instance wiremix"
   },
 
   "custom/notification": {

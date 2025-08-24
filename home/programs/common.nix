@@ -16,6 +16,7 @@
     tokei
     ripgrep
     pipe-rename
+    wiremix
 
     # Programming
     gcc
