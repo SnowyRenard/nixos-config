@@ -34,14 +34,13 @@
     # Productivity
     krita
     obsidian
-    # davinci-resolve
+    thunderbird
 
     # Study
     anki
 
     # Media
     jellyfin-media-player
-    ncspot
   ];
 
   home.sessionVariables = {
