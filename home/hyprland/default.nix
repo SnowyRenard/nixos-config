@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }: {
   home.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -10,14 +11,14 @@
           # This script will randomly go through the files of a directory, setting it
           # up as the wallpaper at regular intervals
           def main [dir: path, time: duration] {
-            loop{
-              if hyprctl clients -j | from json | get fullscreen | all {$in == 0} {
-                let file = (select_file $dir) 
+            loop {
+              if (hyprctl clients -j | from json | get fullscreen | all {$in == 0}) {
+                let file = (select_file $dir)
 
                 update_colors ($file.name | get 0)
               }
 
-              sleep($time)
+              sleep $time
             }
           }
 
@@ -56,10 +57,12 @@
       exec-once = [
         "hyprctl setcursor Bibata-Modern-Classic 16"
         "~/.config/hypr/swww_randomize.nu ~/Pictures/Backgrounds/Art/ 300"
+        "swww_randomize ~/Pictures/Backgrounds/Art/ 300"
       ];
 
       source = [
-        "../../.cache/wallust/hypr-colors.conf"
+        "${config.xdg.cacheHome}/wallust/hypr-colors.conf"
+        "~/Pictures/Backgrounds/background.conf"
       ];
 
       input = {
