@@ -209,8 +209,8 @@
         # turn off keyboard backlight, comment out this section if you dont have a keyboard backlight.
         { 
             timeout = 150;                                          # 2.5min.
-            on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd rgb:kbd_backlight set 0"; # turn off keyboard backlight.
-            on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd rgb:kbd_backlight";        # turn on keyboard backlight.
+            on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd *:kbd_backlight set 0"; # turn off keyboard backlight.
+            on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd *:kbd_backlight";        # turn on keyboard backlight.
         }
         
         {
