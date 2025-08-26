@@ -33,7 +33,6 @@
 
     # Productivity
     krita
-    obsidian
     thunderbird
 
     # Study
