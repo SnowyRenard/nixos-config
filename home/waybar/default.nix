@@ -1,41 +1,94 @@
+{ pkgs, ... }:
 {
   programs.waybar = {
     enable = true;
-
+    
     systemd = {
       enable = true;
       target = "graphical-session.target";
     };
 
-    settings = {
-      mainBar = {
-        layer = "top";
+    settings = [{
+      layer = "top";
 
-        margin-top = 5;
-        margin-bottom = -5;
-        margin-left = 10;
-        margin-right = 10;
-        spacing = 0;
+      margin-top = 5;
+      margin-bottom = -5;
+      margin-left = 10;
+      margin-right = 10;
+      spacing = 0;
 
-        include = [./modules.json];
+      modules-left = [
+        "hyprland/workspaces"
+      ];
+      modules-center = [
+        "hyprland-window"
+      ];
+      modules-right = [
+        "backlight"
+        "battery"
+        "pulseaudio"
+        "network"
+        "clock"
+        "tray"
+      ];
 
-        modules-left = [
-          "hyprland/workspaces"
-        ];
-        modules-center = [
-          "hyprland-window"
-        ];
-        modules-right = [
-          "backlight"
-          "battery"
-          "pulseaudio"
-          "network"
-          "clock"
-          "tray"
-        ];
+      # "hyprland/workspaces" = {
+      #   on-click = "activate";
+      #   active-only = false;
+      #   all-outputs = true;
+      #   formats = "{id}";
+      #   max-length = 1;
+      # };
+      # "hyprland/window" = {
+      #   max-length = 200;
+      #   seperate-outputs = true;
+      # };
 
+      tray = {
+        spacing = 10;
       };
-    };
+
+      clock = {
+        format-alt = "{:%m月%d日}";
+        tooltip = false;
+      };
+
+      backlight = {
+        format = "{icon}";
+        format-icons = [ "" "" "" "" "" "" "" "" "" ];
+        tooltip-format = "{percent}%";
+      };
+
+      battery = {
+        states = {
+          warning =  30;
+          critical =  15;
+        };
+        format = "{icon}";
+        format-charging = "{capacity}% 󱐋";
+        format-plugged = "{capacity}% ";
+        format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+        tooltip-format = "{capacity}%";
+      };
+
+      network = {
+        format-wifi =  "";
+        format-ethernet =  "";
+        format-disconnected =  "";
+        tooltip-format-wifi =  "{essid}";
+        on-click =  "${pkgs.kitty}/bin/kitty --single-instance nmtui";
+      };
+
+      pulseaudio = {
+        format = "{icon}";
+        format-bluetooth = "{icon} {format_source}";
+        format-bluetooth-muted = " {icon} {format_source}";
+        format-muted = " {format_source}";
+        format-icons = { default = [ "" "" "" ]; };
+        tooltip-format = "{volume}%";
+        on-click = "${pkgs.kitty}/bin/kitty --single-instance ${pkgs.wiremix}/bin/wiremix";
+      };
+    }];
 
     style = ./style.css;
   };

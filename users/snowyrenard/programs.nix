@@ -14,7 +14,6 @@
     tokei
     ripgrep
     pipe-rename
-    wiremix
 
     # Programming
     gcc
@@ -31,7 +30,6 @@
     gamemode
     xivlauncher
     prismlauncher
-    path-of-building
 
     # Productivity
     krita
