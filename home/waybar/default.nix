@@ -21,7 +21,7 @@
         "hyprland/workspaces"
       ];
       modules-center = [
-        "hyprland-window"
+        "hyprland/window"
       ];
       modules-right = [
         "backlight"
@@ -32,17 +32,17 @@
         "tray"
       ];
 
-      # "hyprland/workspaces" = {
-      #   on-click = "activate";
-      #   active-only = false;
-      #   all-outputs = true;
-      #   formats = "{id}";
-      #   max-length = 1;
-      # };
-      # "hyprland/window" = {
-      #   max-length = 200;
-      #   seperate-outputs = true;
-      # };
+      "hyprland/workspaces" = {
+        on-click = "activate";
+        active-only = false;
+        all-outputs = true;
+        formats = "{id}";
+        max-length = 1;
+      };
+      "hyprland/window" = {
+        max-length = 200;
+        seperate-outputs = true;
+      };
 
       tray = {
         spacing = 10;
