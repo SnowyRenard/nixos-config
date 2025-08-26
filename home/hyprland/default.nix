@@ -5,6 +5,10 @@
 }: {
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  home.sessionVariables = {
+    SWWW_TRANSITION = "none";
+  };
+
   home.packages = with pkgs; [
     (
       writers.writeNuBin "swww_randomize" /*nu*/''
