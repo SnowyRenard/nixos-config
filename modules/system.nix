@@ -1,12 +1,19 @@
 {
   pkgs,
+  config,
   lib,
   username,
   ...
 }: {
   hardware.xone.enable = true;
   hardware.opentabletdriver.enable = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+
+    # External monitor backlight control
+    extraModulePackages = with config.boot.kernelPackages; [ddcci-driver];
+    kernelModules = [ "i2c-dev" "ddcci_backlight" ];
+  };
 
   users.users.${username} = {
     isNormalUser = true;
