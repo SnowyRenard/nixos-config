@@ -21,6 +21,14 @@
     };
   };
 
+  environment.variables = {
+    MOZ_DISABLE_RDD_SANDBOX = 1;
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "nvidia";
+    NVD_BACKEND = "direct";
+    GBM_BACKEND = "nvidia-drm";
+  };
+
   # Nvidia requires udev and systemd because ofcourse their driver is buggy.
   services.udev.extraRules = ''
     SUBSYSTEM=="i2c-dev", ACTION=="add",\
