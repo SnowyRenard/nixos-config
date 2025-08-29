@@ -1,8 +1,11 @@
 # nixos.wiki/wiki/Nvidia
-{ config, ... }: {
+{ pkgs, config, ... }: {
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware = {
-    graphics.enable = true;
+    graphics = {
+      enable = true;
+      extraPackages = with pkgs; [ nvidia-vaapi-driver ];
+    };
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;
