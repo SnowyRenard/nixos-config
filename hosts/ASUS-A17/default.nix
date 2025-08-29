@@ -26,9 +26,11 @@
 
   services.power-profiles-daemon.enable = true;
   # Do not sleep if external display is connected.
-  services.logind.lidSwitch = "poweroff";
-  services.logind.lidSwitchExternalPower = "lock";
-  services.logind.lidSwitchDocked = "ignore";
+  services.logind.settings = {
+    Login.HandleLidSwitch = "poweroff";
+    Login.HandleLidSwitchExternalPower = "lock";
+    Login.HandleLidSwitchDocked = "ignore";
+  };
 
   # Nvidia Driver
   hardware.nvidia.open =  true;
