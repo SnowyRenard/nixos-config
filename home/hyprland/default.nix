@@ -90,8 +90,32 @@
       # vrr
       misc = {
         vfr = true;
-        vrr = 1;
+        # vrr = 1;
       };
+      # hdr
+      experimental.xx_color_management_v4 = true;
+      debug.full_cm_proto = true;
+      # monitor
+      monitor = [
+        "eDP-1, disable"
+        "eDP-2, disable"
+        # "DP-1, highrr, auto, 1, bitdepth, 10, cm, auto"
+        # "DP-9, highrr, auto, 1, bitdepth, 10, cm, auto"
+      ];
+      monitorv2 = [
+        {
+          output = "DP-1";
+          mode = "highrr";
+          supports_wide_color = true;
+          supports_hdr = true;
+        }
+        {
+          output = "DP-9";
+          mode = "highrr";
+          supports_wide_color = true;
+          supports_hdr = true;
+        }
+      ];
 
       decoration = {
         rounding = 10;
