@@ -208,10 +208,10 @@
             on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd *:kbd_backlight";        # turn on keyboard backlight.
         }
         
-        {
-            timeout = 60;                                    # 1min
-            on-timeout = "loginctl lock-session";            # lock screen when timeout has passed
-        }
+        # {
+        #     timeout = 60;                                    # 1min
+        #     on-timeout = "loginctl lock-session";            # lock screen when timeout has passed
+        # }
         
         {
             timeout = 90;                                                        # 1.5min
