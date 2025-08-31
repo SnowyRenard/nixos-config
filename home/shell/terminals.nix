@@ -10,7 +10,7 @@
     };
     settings = {
       dynamic_background_opacity = false;
-      # background_opacity = 0.75;
+      background_opacity = 0.75;
       disable_ligatures = "cursor";
     };
   };
