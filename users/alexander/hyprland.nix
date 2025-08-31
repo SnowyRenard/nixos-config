@@ -5,7 +5,7 @@
       # vrr
       misc = {
         vfr = true;
-        vrr = 1;
+        # vrr = 1;
       };
       # hdr
       experimental.xx_color_management_v4 = true;
