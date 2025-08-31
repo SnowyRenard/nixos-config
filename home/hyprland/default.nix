@@ -106,12 +106,20 @@
         {
           output = "DP-1";
           mode = "highrr";
+          bitdepth = 10;
+          cm = "hdr";
+          sdr_min_luminance = 0.005;
+          sdr_max_luminance = 250;
           supports_wide_color = true;
           supports_hdr = true;
         }
         {
           output = "DP-9";
           mode = "highrr";
+          bitdepth = 10;
+          cm = "hdr";
+          sdr_min_luminance = 0.005;
+          sdr_max_luminance = 250;
           supports_wide_color = true;
           supports_hdr = true;
         }
