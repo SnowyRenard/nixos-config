@@ -61,8 +61,8 @@
             }
           ];
     };
-      nixosConfigurations.alexander = let
-        username = "alex-desktop";
+      nixosConfigurations.alex-desktop= let
+        username = "alexander";
         specialArgs = { inherit username; };
       in
         nixpkgs.lib.nixosSystem {
