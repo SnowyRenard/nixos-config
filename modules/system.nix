@@ -44,9 +44,6 @@
   # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
 
-  # Set your time zone.
-  time.timeZone = "Europe/Brussels";
-
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 

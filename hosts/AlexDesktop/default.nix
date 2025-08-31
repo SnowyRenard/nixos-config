@@ -3,7 +3,6 @@
     ../../modules/system.nix
     ../../modules/hyprland.nix
     ../../modules/bluetooth.nix
-    ../../modules/nvidia.nix
     ../../modules/amd.nix
 
     ./hardware-configuration.nix
@@ -33,10 +32,7 @@
   };
 
   # Set your time zone.
-  time.timeZone = "Europe/Brussels";
-
-  # Nvidia Driver
-  hardware.nvidia.open =  true;
+  time.timeZone = "Asia/Tokyo";
 
   system.stateVersion = "25.05";
 }

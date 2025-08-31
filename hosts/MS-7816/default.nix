@@ -20,6 +20,9 @@
   networking.hostName = "nixos-desktop";
   services.tailscale.enable = true;
 
+  # Set your time zone.
+  time.timeZone = "Europe/Brussels";
+
   # Nvidia Driver
   hardware.nvidia.open = false;
 
