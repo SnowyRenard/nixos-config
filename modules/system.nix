@@ -89,4 +89,10 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+
+
+  #Jellyfin media player
+  nixpkgs.config.permittedInsecurePackages = [
+    "qtwebengine-5.15.19"
+  ];
 }

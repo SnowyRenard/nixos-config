@@ -37,10 +37,10 @@
     thunderbird
 
     # Study
-    # anki
+    anki
 
     # Media
-    # jellyfin-media-player
+    jellyfin-media-player
   ];
 
   home.sessionVariables = {
