@@ -14,6 +14,7 @@
     tokei
     ripgrep
     pipe-rename
+    udisks
 
     # Programming
     gcc
