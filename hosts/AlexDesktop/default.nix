@@ -23,14 +23,6 @@
   networking.hostName = "nixos-laptop";
   services.tailscale.enable = true;
 
-  services.power-profiles-daemon.enable = true;
-  # Do not sleep if external display is connected.
-  services.logind.settings = {
-    Login.HandleLidSwitch = "poweroff";
-    Login.HandleLidSwitchExternalPower = "lock";
-    Login.HandleLidSwitchDocked = "ignore";
-  };
-
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
