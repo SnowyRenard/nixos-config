@@ -14,7 +14,14 @@
       };
       # hdr
       experimental.xx_color_management_v4 = true;
-      debug.full_cm_proto = true;
+      debug.full_cm_proto = false;
+      render = {
+        send_content_type = true;
+        direct_scanout = 1;
+        cm_fs_passthrough = 0;
+        cm_auto_hdr = 2;
+        new_render_scheduling = false;
+      };
       # monitor
       monitor = [
         "eDP-1, disable"
@@ -24,20 +31,20 @@
         {
           output = "DP-1";
           mode = "highrr";
-          # bitdepth = 10;
+          bitdepth = 10;
           # cm = "hdr";
           # sdr_min_luminance = 0.005;
-          # sdr_max_luminance = 250;
+          # sdr_max_luminance = 400;
           supports_wide_color = true;
           supports_hdr = true;
         }
         {
           output = "DP-9";
           mode = "highrr";
-          # bitdepth = 10;
+          bitdepth = 10;
           # cm = "hdr";
           # sdr_min_luminance = 0.005;
-          # sdr_max_luminance = 250;
+          # sdr_max_luminance = 400;
           supports_wide_color = true;
           supports_hdr = true;
         }
