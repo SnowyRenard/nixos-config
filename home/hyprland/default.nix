@@ -189,7 +189,7 @@
       };
       listener = [
         {
-            timeout = 30;                                # 30sec.
+            timeout = 90;                                # 90sec.
             # ddcci is for external monitor support.
             on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd ddcci* set 10";         # set monitor backlight to minimum, avoid 0 on OLED monitor.
             on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd ddcci*";                 # monitor backlight restore.
@@ -197,7 +197,7 @@
         
         # turn off keyboard backlight, comment out this section if you dont have a keyboard backlight.
         { 
-            timeout = 30;                                          # 30 sec.
+            timeout = 90;                                          # 90 sec.
             on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd *:kbd_backlight set 0"; # turn off keyboard backlight.
             on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd *:kbd_backlight";        # turn on keyboard backlight.
         }
@@ -208,7 +208,7 @@
         # }
         
         {
-            timeout = 90;                                                        # 1.5min
+            timeout = 300;                                                       # 5min
             on-timeout = "hyprctl dispatch dpms off";                            # screen off when timeout has passed
             on-resume = "hyprctl dispatch dpms on && brightnessctl -r";          # screen on when activity is detected after timeout has fired.
         }
