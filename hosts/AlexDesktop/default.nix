@@ -20,7 +20,9 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "nixos-laptop";
+  networking.hostName = "alexander desktop";
+  service.gnome.gnome-keyring.enable = true;
+
   services.tailscale.enable = true;
 
   # Set your time zone.
