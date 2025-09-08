@@ -32,8 +32,6 @@
           render = true;
           skip-levels = 1;
         };
-        rainbow-brackets = true;
-        
         soft-wrap = {
           enable = true;
         };
