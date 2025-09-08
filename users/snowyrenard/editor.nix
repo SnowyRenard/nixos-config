@@ -22,6 +22,7 @@
         cursorline = true;
         completion-replace = true;
         lsp.display-inlay-hints = true;
+        line-number = "relative";
 
         cursor-shape = {
           insert = "bar";
