@@ -37,9 +37,6 @@
     krita
     thunderbird
 
-    # Study
-    anki
-
     # Media
     jellyfin-media-player
   ];
@@ -106,6 +103,14 @@
         obs-multi-rtmp
         obs-pipewire-audio-capture
         obs-vkcapture
+      ];
+    };
+
+    anki = {
+      enable = true;
+      addons = with pkgs.ankiAddons; [
+        review-heatmap
+        passfail2
       ];
     };
   };
