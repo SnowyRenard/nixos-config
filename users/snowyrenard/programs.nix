@@ -39,6 +39,7 @@
 
     # Media
     jellyfin-media-player
+    jftui
   ];
 
   home.sessionVariables = {
