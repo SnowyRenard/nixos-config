@@ -1,4 +1,4 @@
-{ ... }: {
+{
   hardware = {
     # mesa RADV
     graphics = {
