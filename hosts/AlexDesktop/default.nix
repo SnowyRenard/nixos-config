@@ -4,6 +4,7 @@
     ../../modules/hyprland.nix
     ../../modules/bluetooth.nix
     ../../modules/amd.nix
+    ../../modules/tailscale.nix
 
     ./hardware-configuration.nix
   ];
@@ -21,7 +22,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "nixos-laptop";
-  services.tailscale.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";

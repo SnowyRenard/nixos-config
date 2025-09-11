@@ -5,6 +5,7 @@
     ../../modules/bluetooth.nix
     ../../modules/nvidia.nix
     ../../modules/amd.nix
+    ../../modules/tailscale.nix
 
     ./hardware-configuration.nix
   ];
@@ -22,7 +23,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "nixos-laptop";
-  services.tailscale.enable = true;
 
   services.power-profiles-daemon.enable = true;
   # Do not sleep if external display is connected.

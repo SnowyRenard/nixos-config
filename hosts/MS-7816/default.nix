@@ -5,6 +5,7 @@
     ../../modules/jellyfin.nix
     ../../modules/hyprland.nix
     ../../modules/nvidia.nix
+    ../../modules/tailscale.nix
 
     ./hardware-configuration.nix
   ];
@@ -18,7 +19,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "nixos-desktop";
-  services.tailscale.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
