@@ -55,7 +55,7 @@
     settings = with pkgs; {
       "$mod" = "SUPER";
       "$browser" = "${firefox}/bin/firefox";
-      "$terminal" = "${kitty}/bin/kitty -1";
+      "$terminal" = "${foot}/bin/footclient";
       "$drun" = "${rofi}/bin/rofi -show drun";
 
       exec-once = [

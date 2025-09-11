@@ -69,6 +69,7 @@
       noto-fonts-emoji
 
       fira-code
+      nerd-fonts.fira-code
     ];
   };
 

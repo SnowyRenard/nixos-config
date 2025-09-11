@@ -76,7 +76,7 @@
         format-ethernet =  "";
         format-disconnected =  "";
         tooltip-format-wifi =  "{essid}";
-        on-click =  "${pkgs.kitty}/bin/kitty --single-instance nmtui";
+        on-click =  "${pkgs.foot}/bin/footclient nmtui";
       };
 
       pulseaudio = {
@@ -86,7 +86,7 @@
         format-muted = " {format_source}";
         format-icons = { default = [ "" "" "" ]; };
         tooltip-format = "{volume}%";
-        on-click = "${pkgs.kitty}/bin/kitty --single-instance ${pkgs.wiremix}/bin/wiremix";
+        on-click = "${pkgs.foot}/bin/footclient ${pkgs.wiremix}/bin/wiremix";
       };
     }];
 

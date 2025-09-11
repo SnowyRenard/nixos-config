@@ -1,17 +1,24 @@
-{ pkgs, ... }: {
-  home.sessionVariables.TERMINAL = "kitty";
-  
-  programs.kitty = {
+{
+  home.sessionVariables = {
+    TERM = "footclient";
+    TERMINAL = "footclient";
+  };
+
+  programs.foot = {
     enable = true;
-    font = {
-      package = pkgs.nerd-fonts.fira-code;
-      name = "Fira Code";
-      size = 11;
-    };
+    server.enable = true;
+
     settings = {
-      dynamic_background_opacity = false;
-      background_opacity = 0.75;
-      disable_ligatures = "cursor";
+      main = {
+        shell = "nu";
+
+        font = "Fira Code Nerd Font Mono:size=11";
+        dpi-aware = "yes";
+      };
+
+      colors = {
+        alpha = 0.75;
+      };      
     };
   };
 }
