@@ -40,6 +40,7 @@
     # Media
     jellyfin-media-player
     jftui
+    spotify
   ];
 
   home.sessionVariables = {
