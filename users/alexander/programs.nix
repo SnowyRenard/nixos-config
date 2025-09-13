@@ -19,7 +19,6 @@
     gamemode
     xivlauncher
     prismlauncher
-    vulkan-hdr-layer-kwin6
 
     kdePackages.dolphin
 
