@@ -38,7 +38,7 @@
     thunderbird
 
     # Media
-    jellyfin-media-player
+    # jellyfin-media-player
     jftui
     spotify
   ];

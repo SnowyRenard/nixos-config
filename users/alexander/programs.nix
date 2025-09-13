@@ -24,9 +24,6 @@
 
     # Study
     anki
-
-    # Media
-    jellyfin-media-player
   ];
 
   home.sessionVariables = {
