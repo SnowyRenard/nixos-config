@@ -32,15 +32,6 @@
   };
   nix.settings.auto-optimise-store = true;
 
-  programs.steam = {
-    enable = true;
-
-    remotePlay.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-
-    extraCompatPackages = with pkgs; [ proton-ge-bin ];
-  };
-
   # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
 

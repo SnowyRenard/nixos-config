@@ -28,7 +28,6 @@
     
     # Games
     discord
-    gamemode
     xivlauncher
     prismlauncher
     vulkan-hdr-layer-kwin6

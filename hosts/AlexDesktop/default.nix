@@ -5,6 +5,7 @@
     ../../modules/bluetooth.nix
     ../../modules/amd.nix
     ../../modules/tailscale.nix
+    ../../modules/gaming.nix
 
     ./hardware-configuration.nix
   ];
