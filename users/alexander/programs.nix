@@ -24,6 +24,9 @@
 
     # Study
     anki
+
+    #Retard
+    keymapp
   ];
 
   home.sessionVariables = {
