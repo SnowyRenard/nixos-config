@@ -6,7 +6,6 @@
 
     # Monotoring
     yazi
-    btop-rocm
     nvtopPackages.full
 
     # Utils
@@ -50,6 +49,15 @@
   };
 
   programs = {
+    btop = {
+      enable = true;
+      package = pkgs.btop-rocm;
+      
+      settings = {
+        theme_background = false;
+      };
+    };
+
     fastfetch = {
       enable = true;
       settings = {
