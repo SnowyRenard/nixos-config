@@ -189,28 +189,27 @@
       };
       listener = [
         {
-            timeout = 90;                                # 90sec.
+            timeout = 90;#sec
             # ddcci is for external monitor support.
-            on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd ddcci* set 10";         # set monitor backlight to minimum, avoid 0 on OLED monitor.
-            on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd ddcci*";                 # monitor backlight restore.
+            on-timeout = "${pkgs.brillo}/bin/brillo -el -O && ${pkgs.brillo}/bin/brillo -el -S 10%";         # set monitor backlight to minimum, avoid 0 on OLED monitor.
+            on-resume = "${pkgs.brillo}/bin/brillo -el -I";                 # monitor backlight restore.
         }
         
-        # turn off keyboard backlight, comment out this section if you dont have a keyboard backlight.
-        { 
-            timeout = 90;                                          # 90 sec.
-            on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd *:kbd_backlight set 0"; # turn off keyboard backlight.
-            on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd *:kbd_backlight";        # turn on keyboard backlight.
-        }
+        # { 
+        #     timeout = 90;#sec
+        #     on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd *:kbd_backlight set 0"; # turn off keyboard backlight.
+        #     on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd *:kbd_backlight";        # turn on keyboard backlight.
+        # }
         
         # {
-        #     timeout = 60;                                    # 1min
+        #     timeout = 60;# 1min
         #     on-timeout = "loginctl lock-session";            # lock screen when timeout has passed
         # }
         
         {
-            timeout = 300;                                                       # 5min
+            timeout = 300;# 5min
             on-timeout = "hyprctl dispatch dpms off";                            # screen off when timeout has passed
-            on-resume = "hyprctl dispatch dpms on && brightnessctl -r";          # screen on when activity is detected after timeout has fired.
+            on-resume = "hyprctl dispatch dpms on && ${pkgs.brillo}/bin/brillo -el -I";          # screen on when activity is detected after timeout has fired.
         }
       ];
     };
