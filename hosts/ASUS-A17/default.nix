@@ -1,14 +1,25 @@
-{ config, ... }: {
+{ ... }: {
   imports = [
-    ../../modules/system.nix
-    ../../modules/hyprland.nix
-    ../../modules/bluetooth.nix
-    ../../modules/nvidia.nix
-    ../../modules/amd.nix
-    ../../modules/tailscale.nix
-    ../../modules/gaming.nix
-
+    ../../system/default.nix
     ./hardware-configuration.nix
+    
+    ../../system/wm/hyprland.nix
+
+    ../../system/app/steam.nix
+    ../../system/app/gamemode.nix
+
+    ../../system/hardware/bluetooth.nix
+    ../../system/hardware/backlight.nix
+
+    ../../system/hardware/kernel.nix
+    ../../system/hardware/time.nix
+    
+    ../../system/hardware/mesa.nix
+    ../../system/hardware/nvidia.nix
+
+    ../../system/security/firewall.nix
+    ../../system/security/tailscale.nix
+    ../../system/security/automount.nix
   ];
 
   # Bootloader.
@@ -16,10 +27,6 @@
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
-
-  # External monitor brightness control for hypridle.
-  boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
-  boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
 
   # Enable networking
   networking.networkmanager.enable = true;

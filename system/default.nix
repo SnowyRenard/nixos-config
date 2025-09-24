@@ -1,24 +1,8 @@
-{
-  pkgs,
-  config,
-  lib,
-  username,
-  ...
-}: {
-  hardware.xone.enable = true;
-  hardware.opentabletdriver.enable = true;
-  boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-
-    # External monitor backlight control
-    extraModulePackages = with config.boot.kernelPackages; [ddcci-driver];
-    kernelModules = [ "i2c-dev" "ddcci_backlight" ];
-  };
-
+{ username, pkgs, lib, ... }: {
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" ];
     shell = pkgs.nushell;
   };
 
@@ -49,33 +33,8 @@
     LC_TELEPHONE = "ja_JP.UTF-8";
     LC_TIME = "ja_JP.UTF-8";
   };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  fonts = {
-    packages = with pkgs; [
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-emoji
-
-      fira-code
-      nerd-fonts.fira-code
-    ];
-  };
-
   environment.systemPackages = with pkgs; [
     helix
     git
   ];
-
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
 }

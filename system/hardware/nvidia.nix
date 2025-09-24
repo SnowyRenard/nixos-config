@@ -1,4 +1,3 @@
-# nixos.wiki/wiki/Nvidia
 { pkgs, config, ... }: {
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware = {
@@ -50,5 +49,4 @@
     '';
     serviceConfig.Type = "oneshot";
   };
-
 }
