@@ -7,8 +7,8 @@
 
     ../../system/app/steam.nix
     ../../system/app/gamemode.nix
+    ../../system/app/jellyfin.nix
 
-    ../../system/hardware/bluetooth.nix
     ../../system/hardware/backlight.nix
 
     ../../system/hardware/kernel.nix
