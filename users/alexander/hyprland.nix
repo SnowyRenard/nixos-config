@@ -1,7 +1,11 @@
-{ ... }: {
+{ pkgs, ... }: {
 
   wayland.windowManager.hyprland = {
-    settings = {
+    settings =  with pkgs; {
+      "$browser" = "${firefox}/bin/firefox";
+      "$terminal" = "${foot}/bin/footclient";
+      "$drun" = "${rofi}/bin/rofi -show drun";
+
       # vrr
       misc = {
         vfr = true;

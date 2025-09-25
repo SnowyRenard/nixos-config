@@ -1,12 +1,10 @@
-{ ... }: {
+{ pkgs, ... }: {
 
   wayland.windowManager.hyprland = {
-    settings = {
-      # input = {
-      #   kb_layout = "us, us";
-      #   kb_variant = " , colemak_dh";
-      #   kb_options = "grp:win_space_toggle";
-      # };
+    settings =  with pkgs; {
+      "$browser" = "zen";
+      "$terminal" = "${foot}/bin/footclient";
+      "$drun" = "${rofi}/bin/rofi -show drun";
       # vrr
       misc = {
         vfr = true;

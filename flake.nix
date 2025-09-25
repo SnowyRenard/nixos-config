@@ -12,9 +12,14 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nur, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nur, zen-browser, ... }: {
     nixosConfigurations.nixos-desktop = let
         username = "snowyrenard";
         specialArgs = { inherit username; };

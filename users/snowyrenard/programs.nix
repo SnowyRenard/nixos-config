@@ -29,6 +29,7 @@
     discord
     xivlauncher
     prismlauncher
+    rpcs3
     vulkan-hdr-layer-kwin6
 
     # Productivity

@@ -52,11 +52,8 @@
     systemd.enable = false;
 
     # App settings
-    settings = with pkgs; {
+    settings = {
       "$mod" = "SUPER";
-      "$browser" = "${firefox}/bin/firefox";
-      "$terminal" = "${foot}/bin/footclient";
-      "$drun" = "${rofi}/bin/rofi -show drun";
 
       exec-once = [
         "hyprctl setcursor Bibata-Modern-Classic 16"
