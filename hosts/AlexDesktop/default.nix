@@ -32,7 +32,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "nixos-laptop";
+  networking.hostName = "alex-desktop";
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
