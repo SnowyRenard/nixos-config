@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.consoleLogLevel = 0;
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    consoleLogLevel = 0;
+    kernel.sysctl = {
+      "vm.swappiness" = 10;
+    };
+  };
 }
