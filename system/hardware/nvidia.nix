@@ -9,11 +9,6 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;
 
-      powerManagement = {
-        enable = true;
-        finegrained = false;
-      };
-
       dynamicBoost.enable = true;
 
       nvidiaSettings = false;
