@@ -97,6 +97,17 @@
         };
       };
 
+      experimental.xx_color_management_v4 = true;
+      monitorv2 = [
+        {
+          output = "";
+          mode = "highrr";
+          bitdepth = 10;
+          supports_wide_color = true;
+          supports_hdr = true;
+        }
+      ];
+
       bind = [
         "$mod, W, exec, $browser"
         "$mod, D, exec, $drun"
