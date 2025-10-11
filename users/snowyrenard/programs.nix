@@ -27,9 +27,11 @@
     
     # Games
     discord
-    xivlauncher
-    prismlauncher
-    rpcs3
+    # xivlauncher
+    # prismlauncher
+    # heroic
+    # rpcs3
+    # cemu
     vulkan-hdr-layer-kwin6
 
     # Productivity
@@ -38,8 +40,8 @@
 
     # Media
     # jellyfin-media-player
-    jftui
-    spotify
+    # jftui
+    ncspot
   ];
 
   home.sessionVariables = {
@@ -56,6 +58,7 @@
       
       settings = {
         theme_background = false;
+        update_ms = 100;
       };
     };
 
