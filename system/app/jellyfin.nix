@@ -36,12 +36,5 @@
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
-
-    # Torrent
-    qbittorrent
-
-    # VPN
-    protonvpn-gui
-    networkmanagerapplet
   ];
 }
