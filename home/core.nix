@@ -12,7 +12,7 @@
     # Window Manager
     ./hyprland
     ./rofi
-    ./waybar
+    # ./waybar
     ./wallust
   ];
 
