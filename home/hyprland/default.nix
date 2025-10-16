@@ -156,32 +156,6 @@
     };
   };
 
-  programs.ashell = {
-    enable = true;
-    systemd.enable = true;
-    settings = {
-      modules = {
-        left = ["Workspaces"];
-        center = ["Window Title"];
-        right = [
-          [
-            "Clock"
-            "Privacy"
-            "Tray"
-            "Settings"
-          ]
-        ];
-      };
-
-      clock.format = "%R";
-      
-      appearance = {
-        font_name = "Fira Code";
-        scale_factor = 1.25;
-      };
-    };
-  };
-
   programs.hyprlock = {
     enable = true;
     settings = {
