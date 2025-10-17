@@ -103,8 +103,6 @@
           output = "";
           mode = "highrr";
           bitdepth = 10;
-          supports_wide_color = true;
-          supports_hdr = true;
         }
       ];
 
