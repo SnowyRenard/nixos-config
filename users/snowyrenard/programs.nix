@@ -27,11 +27,11 @@
     
     # Games
     discord
-    # xivlauncher
-    # prismlauncher
-    # heroic
-    # rpcs3
-    # cemu
+    xivlauncher
+    prismlauncher
+    heroic
+    rpcs3
+    cemu
     vulkan-hdr-layer-kwin6
 
     # Productivity
@@ -40,6 +40,7 @@
 
     # Media
     # jellyfin-media-player
+    jellyfin-mpv-shim
     # jftui
     ncspot
   ];
