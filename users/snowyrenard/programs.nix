@@ -29,10 +29,13 @@
     discord
     xivlauncher
     prismlauncher
+    limo
     heroic
     rpcs3
     cemu
     vulkan-hdr-layer-kwin6
+    gamescope
+    gamescope-wsi
 
     # Productivity
     krita

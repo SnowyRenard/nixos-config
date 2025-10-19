@@ -16,8 +16,10 @@
       nvidiaSettings = false;
     };
   };
-  environment.variables.ENABLE_HDR_WSI=1;
-  environment.systemPackages = [pkgs.vulkan-hdr-layer-kwin6];
+  environment = {
+    variables.ENABLE_HDR_WSI=1;
+    systemPackages = [pkgs.vulkan-hdr-layer-kwin6];
+  };
 
   # Nvidia requires udev and systemd because ofcourse their driver is buggy.
   services.udev.extraRules = ''
