@@ -21,4 +21,19 @@
       };      
     };
   };
+
+  xdg.desktopEntries = {
+    foot = {
+      name = "foot";
+      noDisplay = true;
+    };
+    footclient = {
+      name = "footclient";
+      noDisplay = true;
+    };
+    foot-server = {
+      name = "foot-server";
+      noDisplay = true;
+    };
+  };
 }
