@@ -31,7 +31,7 @@
     prismlauncher
     limo
     heroic
-    rpcs3
+    # rpcs3
     cemu
     vulkan-hdr-layer-kwin6
     gamescope
