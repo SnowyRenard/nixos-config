@@ -21,7 +21,7 @@
     ../../system/security/firewall.nix
     ../../system/security/tailscale.nix
     ../../system/security/automount.nix
-    ../../system/security/proton-vpn.nix
+    # ../../system/security/proton-vpn.nix
   ];
 
   # Bootloader.

@@ -12,8 +12,7 @@
     dust
     tokei
     ripgrep
-    pipe-rename
-    udisks
+    # pipe-rename
 
     # Programming
     gcc
@@ -27,15 +26,13 @@
     
     # Games
     discord
-    xivlauncher
-    prismlauncher
-    limo
+    # xivlauncher
+    # prismlauncher
+    # limo
     heroic
     # rpcs3
     cemu
     vulkan-hdr-layer-kwin6
-    gamescope
-    gamescope-wsi
 
     # Productivity
     krita
@@ -44,7 +41,6 @@
     # Media
     # jellyfin-media-player
     jellyfin-mpv-shim
-    # jftui
     ncspot
   ];
 
