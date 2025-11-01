@@ -28,7 +28,7 @@
     discord
     # xivlauncher
     # prismlauncher
-    # limo
+    (limo.override { withUnrar = true; })
     heroic
     # rpcs3
     cemu
