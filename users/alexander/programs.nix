@@ -74,8 +74,10 @@
 
     git = {
       enable = true;
-      userName = "Snowy Renard";
-      userEmail = "snowyrenard@gmail.com";
+      settings.user = {
+        name = "Snowy Renard";
+        email = "snowyrenard@gmail.com";
+      };
     };
 
     gh = {
