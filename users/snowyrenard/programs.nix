@@ -17,6 +17,9 @@
     # Programming
     gcc
     rustup
+    cargo-pgo
+    cargo-bump
+    cargo-flamegraph
 
     # Git
     gitui
