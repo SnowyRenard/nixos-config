@@ -5,7 +5,7 @@
   ...
 }: {
 
-  imports = [ zen-browser.homeModules.beta ];
+  imports = [ zen-browser.homeModules.default ];
   home.sessionVariables.BROWSER = "zen";
 
   programs.zen-browser = {
