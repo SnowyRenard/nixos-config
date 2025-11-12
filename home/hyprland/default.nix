@@ -37,8 +37,7 @@
           # Update the environment based upon the path to an image
           def update_colors [img: path] {
             [
-              (pkill waybar -SIGUSR2 | ignore;),
-              (${wallust}/bin/wallust run $img --quiet -s | ignore),
+              (${wallust}/bin/wallust run $img --quiet -s | ignore; pkill waybar -SIGUSR2 | ignore),
               (${imagemagick}/bin/magick $img -gravity center -extent 1.005:1 ~/.cache/rofi.bmp),
               (${swww}/bin/swww img $img),
             ] | par-each { $in }
