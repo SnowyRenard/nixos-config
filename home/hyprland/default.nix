@@ -57,7 +57,7 @@
 
       exec-once = [
         "hyprctl setcursor Bibata-Modern-Classic 16"
-        "~/.config/hypr/swww_randomize.nu ~/Pictures/Backgrounds/Art/ 300"
+        "~/.config/hypr/swww_randomize.nu ~/Pictures/Backgrounds/Art/ 300sec"
         "swww_randomize ~/Pictures/Backgrounds/Art/ 300"
       ];
 
