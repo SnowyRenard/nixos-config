@@ -1,17 +1,24 @@
 {
   pkgs,
   ...
-}: {
+}: 
+{
   home.sessionVariables.EDITOR = "hx";
 
-  home.packages = with pkgs; [
-    nil
-    markdown-oxide
-  ];
-    
   programs.helix = {
     enable = true;
     defaultEditor = true;
+
+    extraPackages = with pkgs; [
+      nixd
+      markdown-oxide
+
+     tree-sitter
+     tree-sitter-grammars.tree-sitter-rust
+     tree-sitter-grammars.tree-sitter-toml
+     tree-sitter-grammars.tree-sitter-nix
+     tree-sitter-grammars.tree-sitter-nu
+    ];
 
     settings = {
       theme = "onedark";
@@ -49,15 +56,23 @@
         command = "${harper}/bin/harper-ls";
         args = [ "--stdio" ];
       };
+      language-server.typos = with pkgs; {
+        command = "${typos-lsp}/bin/typos-lsp";
+      };
 
       language = [{
         name = "rust";
-        language-servers = [ "rust-analyzer" "harper" ]; 
+        language-servers = [ "harper" "typos" "rust-analyzer" ]; 
       }
       {
         name = "markdown";
-        language-servers = [ "harper" ];
-      }];
+        language-servers = [ "harper" "markdown-oxide" ];
+      }
+      {
+        name = "nix";
+        language-servers = [ "harper" "typos" "nixd" ];
+      }
+    ];
     };
   };
 }
