@@ -20,6 +20,7 @@
     cargo-pgo
     cargo-bump
     cargo-flamegraph
+    cargo-all-features
 
     # Git
     gitui
