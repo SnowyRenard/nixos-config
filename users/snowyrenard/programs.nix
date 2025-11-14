@@ -31,7 +31,7 @@
     # Games
     discord
     # xivlauncher
-    # prismlauncher
+    prismlauncher
     (limo.override { withUnrar = true; })
     heroic
     # rpcs3
