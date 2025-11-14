@@ -4,7 +4,7 @@
     # Archives
     p7zip
 
-    # Monotoring
+    # Monitoring
     yazi
     nvtopPackages.full
 
