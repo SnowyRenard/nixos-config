@@ -19,11 +19,11 @@
       options = [ "subvol=@" "compress=zstd" ];
     };
 
-  fileSystems."/Vault" =
-    { device = "/dev/disk/by-uuid/b83e976f-eda9-4c9a-89bf-c947e5d3a0a2";
-      fsType = "btrfs";
-      options = [ "compress=zstd" ];
-    };
+  # fileSystems."/Vault" =
+  #   { device = "/dev/disk/by-uuid/b83e976f-eda9-4c9a-89bf-c947e5d3a0a2";
+  #     fsType = "btrfs";
+  #     options = [ "compress=zstd" ];
+  #   };
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/C489-6035";
