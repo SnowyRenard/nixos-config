@@ -29,8 +29,8 @@
           system = "x86_64-linux";
           
           modules = [
-            ./hosts/MS-7816
-
+            ./hosts/nixos-desktop
+            
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
