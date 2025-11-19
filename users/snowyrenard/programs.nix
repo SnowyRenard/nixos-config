@@ -36,7 +36,6 @@
     heroic
     # rpcs3
     cemu
-    vulkan-hdr-layer-kwin6
     steam-run
 
     # Productivity
