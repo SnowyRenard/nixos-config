@@ -30,11 +30,11 @@
     
     # Games
     discord
-    # xivlauncher
+    xivlauncher
     prismlauncher
     (limo.override { withUnrar = true; })
     heroic
-    # rpcs3
+    rpcs3
     cemu
     steam-run
 
