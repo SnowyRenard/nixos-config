@@ -74,6 +74,8 @@
         "col.inactive_border" = "rgba(ffffffbb)";
 
         layout = "dwindle";
+
+        allow_tearing = true;
       };
 
       decoration = {
