@@ -56,7 +56,7 @@
 
       exec-once = [
         "hyprctl setcursor Bibata-Modern-Classic 16"
-        "swww_randomize ~/Pictures/Backgrounds/Art/ 300sec"
+        "sleep 5s; swww_randomize ~/Pictures/Backgrounds/Art/ 300sec"
       ];
 
       source = [

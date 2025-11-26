@@ -39,6 +39,8 @@
   networking.networkmanager.enable = true;
   networking.hostName = "nixos-laptop";
 
+  networking.extraHosts = "0.0.0.0 modules-cdn.eac-prod.on.epicgames.com";
+
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
 

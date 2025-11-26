@@ -168,6 +168,18 @@
 
             definedAliases = [ "@wh" ];
           };
+
+          g2a = {
+            name = "G2A";
+            urls = [{
+              template = "https://g2a.com/search";
+              params = [
+                { name = "query"; value = "{searchTerms}"; }
+              ];
+            }];
+
+            definedAliases = [ "@g2a" "@g" "g2a" ];
+          };
         };
       };
 
