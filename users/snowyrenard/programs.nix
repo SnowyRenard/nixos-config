@@ -6,7 +6,7 @@
 
     # Monitoring
     yazi
-    nvtopPackages.full
+    nvtopPackages.amd
 
     # Utils
     dust

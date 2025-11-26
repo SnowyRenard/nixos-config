@@ -6,7 +6,7 @@
 
     # Monitoring
     btop-rocm
-    nvtopPackages.full
+    nvtopPackages.amd
 
     # Git
     gitui
