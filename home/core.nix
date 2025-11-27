@@ -10,7 +10,7 @@
     ./shell
 
     # Window Manager
-    ./hyprland
+    ./hyprland.nix
     ./rofi
     ./waybar
     ./wallust
