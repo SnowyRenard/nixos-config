@@ -50,7 +50,8 @@
 
   home.sessionVariables = {
     OBS_VKCAPTURE = 1;
-    # FSR4_UPGRADE = 1; # proton-ge overwrite fsr3 to fsr4
+    FSR4_UPGRADE = 1; # proton-ge overwrite fsr3 to fsr4
+    PROTON_FSR4_UPGRADE = 1;
     # PROTON_ENABLE_WAYLAND = 1;
     # PROTON_ENABLE_HDR = 1;
   };
