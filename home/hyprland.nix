@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  imports = [ ../wayland.nix ];
+  imports = [ ./wayland.nix ];
     
   wayland.windowManager.hyprland = {
     enable = true;
