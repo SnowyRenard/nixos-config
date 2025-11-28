@@ -1,6 +1,79 @@
 {
   "nodes": {
+    "fht-compositor": {
+      "inputs": {
+        "fht-share-picker": "fht-share-picker",
+        "flake-parts": "flake-parts",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": []
+      },
+      "locked": {
+        "lastModified": 1763648178,
+        "narHash": "sha256-vF/C/+4yJyncZLCNvUgRUS4KRCeGlkQkd9p5yGbWXu8=",
+        "owner": "nferhat",
+        "repo": "fht-compositor",
+        "rev": "9204b43eceb3b0d2444b5c19fd1e46549673a2f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nferhat",
+        "repo": "fht-compositor",
+        "type": "github"
+      }
+    },
+    "fht-share-picker": {
+      "inputs": {
+        "flake-parts": [
+          "fht-compositor",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "fht-compositor",
+          "nixpkgs"
+        ],
+        "rust-overlay": [
+          "fht-compositor"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760900224,
+        "narHash": "sha256-YEGJe7yBNT20MSJn79s9WAjugRjv254PLVrph/Ja0dg=",
+        "owner": "nferhat",
+        "repo": "fht-share-picker",
+        "rev": "a6ed304a9f40f9a088cec5479765616dd68dca73",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nferhat",
+        "ref": "gtk-rewrite",
+        "repo": "fht-share-picker",
+        "type": "github"
+      }
+    },
     "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "fht-compositor",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753121425,
+        "narHash": "sha256-TVcTNvOeWWk1DXljFxVRp+E0tzG1LhrVjOGGoMHuXio=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "644e0fc48951a860279da645ba77fe4a6e814c5e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_2": {
       "inputs": {
         "nixpkgs-lib": [
           "nur",
@@ -81,7 +154,7 @@
     },
     "nur": {
       "inputs": {
-        "flake-parts": "flake-parts",
+        "flake-parts": "flake-parts_2",
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -102,6 +175,7 @@
     },
     "root": {
       "inputs": {
+        "fht-compositor": "fht-compositor",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nur": "nur",

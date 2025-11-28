@@ -11,6 +11,7 @@
 
     # Window Manager
     ./hyprland.nix
+    ./fht-compositor.nix
     ./rofi
     ./waybar
     ./wallust

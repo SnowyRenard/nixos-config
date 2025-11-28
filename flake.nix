@@ -17,9 +17,14 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    fht-compositor = {
+      url = "github:nferhat/fht-compositor";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay.follows = "";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nur, zen-browser, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nur, ... }: {
     nixosConfigurations.nixos-desktop = let
         username = "snowyrenard";
         specialArgs = { inherit username; };
