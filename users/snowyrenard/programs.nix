@@ -41,6 +41,7 @@
     # Productivity
     krita
     thunderbird
+    qbittorrent
 
     # Media
     # jellyfin-media-player
