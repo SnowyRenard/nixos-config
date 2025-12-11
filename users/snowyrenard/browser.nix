@@ -133,7 +133,7 @@
            }];
 
            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-           definedAliases = [ "@hm" ];
+           definedAliases = [ "@hm" "home manager" ];
           };
 
           jisho = {
@@ -142,7 +142,7 @@
               template = "https://jisho.org/search/{searchTerms}";
             }];
 
-            definedAlias = [ "@js" ];
+            definedAlias = [ "@js" "jisho" ];
           };
 
           youtube = {
@@ -154,7 +154,7 @@
               ];
             }];
 
-            definedAliases = [ "@yt" ];
+            definedAliases = [ "@yt" "youtube" ];
           };
 
           wallhaven = {
@@ -166,7 +166,7 @@
               ];
             }];
 
-            definedAliases = [ "@wh" ];
+            definedAliases = [ "@wh" "wallhaven" ];
           };
 
           g2a = {
@@ -178,7 +178,19 @@
               ];
             }];
 
-            definedAliases = [ "@g2a" "@g" "g2a" ];
+            definedAliases = [ "@g" "@g2a" "g2a" ];
+          };
+
+          protond-db = {
+            name = "protondb";
+            urls = [{
+              template = "https://protondb.com/search";
+              params = [
+                { name = "q"; value = "{searchTerms}"; }
+              ];
+            }];
+
+            definedAliases = [ "@p" "proton" "protondb" ];
           };
         };
       };
