@@ -17,11 +17,6 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    fht-compositor = {
-      url = "github:nferhat/fht-compositor";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.rust-overlay.follows = "";
-    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, nur, ... }: {
