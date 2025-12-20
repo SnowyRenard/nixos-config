@@ -16,6 +16,7 @@
     
     ../../system/hardware/mesa.nix
     ../../system/hardware/lvm.nix
+    ../../system/hardware/bluetooth.nix
 
     ../../system/security/firewall.nix
     ../../system/security/tailscale.nix
@@ -28,8 +29,6 @@
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
-
-  hardware.xone.enable = true;
 
   # External monitor brightness control for hypridle.
   boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
