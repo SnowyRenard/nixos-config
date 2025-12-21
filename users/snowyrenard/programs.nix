@@ -24,7 +24,6 @@
     cargo-all-features
 
     # Git
-    gitui
     jujutsu
 
     # Web Tools
@@ -111,11 +110,6 @@
         name = "Snowy Renard";
         email = "snowyrenard@gmail.com";
       };
-    };
-
-    gh = {
-      enable = true;
-      gitCredentialHelper.enable = true;
     };
 
     obs-studio = {
