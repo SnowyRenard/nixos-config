@@ -30,7 +30,7 @@
     curl
     
     # Games
-    discord
+    vesktop
     xivlauncher
     prismlauncher
     (limo.override { withUnrar = true; })
