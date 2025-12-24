@@ -1,0 +1,10 @@
+{ ... }:
+{
+  services.udev.extraRules = ''
+    # Disable DualSense Touchpad acting as mouse
+    # USB
+    ATTRS{name}=="DualSense Wireless Controller Touchpad", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+    # Bluetooth
+    ATTRS{name}=="Wireless Controller Touchpad", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+  '';
+}

@@ -12,6 +12,7 @@
 
     ../../system/hardware/kernel.nix
     ../../system/hardware/time.nix
+    ../../system/hardware/dualsense.nix
     
     ../../system/hardware/mesa.nix
 

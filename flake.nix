@@ -3,6 +3,7 @@
   
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -19,7 +20,7 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nur, ... }: {
+  outputs = inputs@{ nixpkgs, nixpkgs-stable, home-manager, nur, ... }: {
     nixosConfigurations.nixos-desktop = let
         username = "snowyrenard";
         specialArgs = { inherit username; };
