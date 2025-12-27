@@ -1,54 +1,54 @@
-{ pkgs, nixpkgs-stable, ... }:
+{ pkgs, ... }:
 {
-  home.packages = [
+  home.packages = with pkgs; [
     # Archives
-    pkgs.p7zip
+    p7zip
 
     # Monitoring
-    pkgs.yazi
-    pkgs.nvtopPackages.amd
+    yazi
+    nvtopPackages.amd
 
     # Utils
-    pkgs.dust
-    pkgs.tokei
-    pkgs.ripgrep
+    dust
+    tokei
+    ripgrep
     # pipe-rename
 
     # Programming
-    pkgs.gcc
-    pkgs.rustup
-    pkgs.cargo-pgo
-    pkgs.cargo-bump
-    pkgs.cargo-flamegraph
-    pkgs.cargo-tarpaulin
-    pkgs.cargo-all-features
+    gcc
+    rustup
+    cargo-pgo
+    cargo-bump
+    cargo-flamegraph
+    cargo-tarpaulin
+    cargo-all-features
 
     # Git
-    pkgs.jujutsu
+    jujutsu
 
     # Web Tools
-    pkgs.curl
+    curl
     
     # Games
-    pkgs.vesktop
-    nixpkgs-unstable.xivlauncher
-    pkgs.prismlauncher
-    (pkgs.limo.override { withUnrar = true; })
-    pkgs.heroic
-    pkgs.rpcs3
-    pkgs.cemu
-    pkgs.steam-run
-    pkgs.lutris
+    vesktop
+    xivlauncher
+    prismlauncher
+    (limo.override { withUnrar = true; })
+    heroic
+    rpcs3
+    cemu
+    steam-run
+    lutris
 
     # Productivity
-    pkgs.krita
-    pkgs.thunderbird
-    pkgs.qbittorrent
+    krita
+    thunderbird
+    qbittorrent
 
     # Media
     # jellyfin-media-player
-    pkgs.jellyfin-mpv-shim
-    pkgs.ncspot
+    jellyfin-mpv-shim
+    ncspot
   ];
 
   home.sessionVariables = {
