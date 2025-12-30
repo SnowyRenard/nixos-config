@@ -17,10 +17,9 @@
     # Programming
     gcc
     rustup
-    cargo-pgo
-    cargo-bump
-    cargo-flamegraph
+    # Cargo
     cargo-tarpaulin
+    cargo-flamegraph
     cargo-all-features
 
     # Git
@@ -30,25 +29,24 @@
     curl
     
     # Games
+    heroic
     vesktop
+    # Launcher
     xivlauncher
     prismlauncher
+    # Modding
+    openmw
     (limo.override { withUnrar = true; })
-    heroic
-    rpcs3
+    # Emulation
     cemu
-    steam-run
-    lutris
+    rpcs3
 
     # Productivity
-    krita
-    thunderbird
     qbittorrent
 
     # Media
-    # jellyfin-media-player
-    jellyfin-mpv-shim
     ncspot
+    jellyfin-mpv-shim
   ];
 
   home.sessionVariables = {
