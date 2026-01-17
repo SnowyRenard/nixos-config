@@ -12,7 +12,7 @@
     dust
     tokei
     ripgrep
-    # pipe-rename
+    pipe-rename
 
     # Programming
     gcc
@@ -47,6 +47,7 @@
     # Media
     ncspot
     jellyfin-mpv-shim
+    jellyfin-desktop
   ];
 
   home.sessionVariables = {
