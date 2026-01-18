@@ -11,6 +11,7 @@
     # Utils
     dust
     tokei
+    tealdeer
     ripgrep
     pipe-rename
 
@@ -21,6 +22,7 @@
     cargo-tarpaulin
     cargo-flamegraph
     cargo-all-features
+    hyperfine
 
     # Git
     jujutsu
@@ -43,6 +45,9 @@
 
     # Productivity
     qbittorrent
+
+    proton-pass
+    protonmail-desktop
 
     # Media
     ncspot

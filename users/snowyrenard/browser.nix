@@ -190,7 +190,7 @@
               ];
             }];
 
-            definedAliases = [ "@p" "proton" "protondb" ];
+            definedAliases = [ "@pdb" ];
           };
         };
       };
