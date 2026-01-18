@@ -1,8 +1,6 @@
 { pkgs,
   ...
 }: {
-    environment.systemPackages = with pkgs; [
-      protonvpn-gui
-      networkmanagerapplet
-    ];
+    networking.firewall.checkReversePath = false;
+    environment.systemPackages = with pkgs; [wireguard-tools protonvpn-gui];
   }
