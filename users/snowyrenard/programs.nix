@@ -17,12 +17,13 @@
 
     # Programming
     gcc
+    gnumake
     rustup
+    hyperfine
     # Cargo
     cargo-tarpaulin
     cargo-flamegraph
     cargo-all-features
-    hyperfine
 
     # Git
     jujutsu

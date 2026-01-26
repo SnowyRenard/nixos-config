@@ -75,8 +75,9 @@
         packages = with pkgs.nur.repos.rycee.firefox-addons; [
           ublock-origin
           darkreader
-          bitwarden
           sponsorblock
+          proton-pass
+          proton-vpn
         ];
       }; 
 
