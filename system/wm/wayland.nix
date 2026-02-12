@@ -7,6 +7,6 @@
   services.displayManager = {
     enable = true;
     ly.enable = true;
-    environment.XDG_CURRENT_DESKTOP = "X-NIXOS-SYSTEMD-AWARE";
-  };  
+    # generic.environment.XDG_CURRENT_DESKTOP = "X-NIXOS-SYSTEMD-AWARE";
+  };
 }
