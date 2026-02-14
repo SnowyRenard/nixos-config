@@ -13,6 +13,7 @@
       nixd
       markdown-oxide
       glsl_analyzer
+      zls
 
      tree-sitter
      tree-sitter-grammars.tree-sitter-rust

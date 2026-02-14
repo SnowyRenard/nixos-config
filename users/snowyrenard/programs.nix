@@ -18,12 +18,14 @@
     # Programming
     gcc
     gnumake
+    zig
     rustup
     hyperfine
     # Cargo
     cargo-tarpaulin
     cargo-flamegraph
     cargo-all-features
+    norminette
 
     # Git
     jujutsu
