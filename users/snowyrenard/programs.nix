@@ -1,61 +1,75 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    # Archives
-    p7zip
+    #########
+    # Utils #
+    #########
+      # Archives
+      p7zip
+      # File System
+      dust
+      ripgrep
+      pipe-rename
+      # Monitoring
+      yazi
+      nvtopPackages.amd
+      # Web
+      curl
+      # Extra
+      tokei
+      tealdeer
 
-    # Monitoring
-    yazi
-    nvtopPackages.amd
+    ###############
+    # Programming #
+    ###############
+      # Compilers
+      gcc
+      gnumake
+      zig
+      rustup
+      # Cargo
+      cargo-tarpaulin
+      cargo-flamegraph
+      cargo-all-features
+      # code tools
+      hyperfine
+      norminette
+      # Git
+      jujutsu
 
-    # Utils
-    dust
-    tokei
-    tealdeer
-    ripgrep
-    pipe-rename
+    #########  
+    # Games #
+    #########
+      # Launcher
+      heroic
+      xivlauncher
+      prismlauncher
+      # Modding
+      openmw
+      (limo.override { withUnrar = true; })
+      # Emulation
+      cemu
+      rpcs3
 
-    # Programming
-    gcc
-    gnumake
-    zig
-    rustup
-    hyperfine
-    # Cargo
-    cargo-tarpaulin
-    cargo-flamegraph
-    cargo-all-features
-    norminette
+    ################
+    # Productivity #
+    ################
+      # Communication
+      vesktop
+      # File sharing
+      qbittorrent
+      # Proton
+      proton-pass
+      protonmail-desktop
 
-    # Git
-    jujutsu
-
-    # Web Tools
-    curl
-    
-    # Games
-    heroic
-    vesktop
-    # Launcher
-    xivlauncher
-    prismlauncher
-    # Modding
-    openmw
-    (limo.override { withUnrar = true; })
-    # Emulation
-    cemu
-    rpcs3
-
-    # Productivity
-    qbittorrent
-
-    proton-pass
-    protonmail-desktop
-
-    # Media
-    ncspot
-    jellyfin-mpv-shim
-    jellyfin-desktop
+    #########
+    # Media #
+    #########
+      # Music
+      ncspot
+      # Jellyfin
+      jellyfin-mpv-shim
+      jellyfin-desktop
   ];
 
   home.sessionVariables = {
