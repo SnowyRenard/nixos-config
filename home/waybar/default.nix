@@ -2,7 +2,7 @@
 {
   programs.waybar = {
     enable = true;
-    
+
     systemd = {
       enable = true;
       target = "graphical-session.target";
@@ -41,7 +41,7 @@
       };
       "hyprland/window" = {
         max-length = 200;
-        seperate-outputs = true;
+        separate-outputs = true;
       };
 
       tray = {

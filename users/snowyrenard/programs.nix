@@ -32,6 +32,7 @@
       cargo-flamegraph
       cargo-all-features
       # code tools
+      man-pages
       hyperfine
       norminette
       # Git
