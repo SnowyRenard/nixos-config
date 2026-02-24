@@ -15,12 +15,12 @@
       glsl_analyzer
       zls
 
-     tree-sitter
-     tree-sitter-grammars.tree-sitter-rust
-     tree-sitter-grammars.tree-sitter-toml
-     tree-sitter-grammars.tree-sitter-nix
-     tree-sitter-grammars.tree-sitter-nu
-     tree-sitter-grammars.tree-sitter-glsl
+      tree-sitter
+      tree-sitter-grammars.tree-sitter-rust
+      tree-sitter-grammars.tree-sitter-toml
+      tree-sitter-grammars.tree-sitter-nix
+      tree-sitter-grammars.tree-sitter-nu
+      tree-sitter-grammars.tree-sitter-glsl
     ];
 
     settings = {

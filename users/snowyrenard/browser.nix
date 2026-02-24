@@ -6,7 +6,7 @@
 }: {
 
   imports = [ zen-browser.homeModules.default ];
-  home.sessionVariables.BROWSER = "zen";
+  home.sessionVariables.BROWSER = "zen-beta";
 
   programs.zen-browser = {
     enable = true;
