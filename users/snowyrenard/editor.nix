@@ -3,8 +3,6 @@
   ...
 }: 
 {
-  home.sessionVariables.EDITOR = "hx";
-
   programs.helix = {
     enable = true;
     defaultEditor = true;
@@ -62,6 +60,18 @@
       language-server.typos = with pkgs; {
         command = "${typos-lsp}/bin/typos-lsp";
       };
+      language-server.lsp-ai = with pkgs; {
+        command = "${lsp-ai}/bin/lsp-ai";
+        models.model-ollama = {
+          type = "ollama";
+          model = "qwen2.5-Coder:14b";
+        };
+        chat = {
+          trigger = "!C";
+          action_display_name = "Chat";
+          model = "model-ollama";
+        };
+      };
 
       language = [{
         name = "rust";
@@ -69,7 +79,7 @@
       }
       {
         name = "markdown";
-        language-servers = [ "harper" "markdown-oxide" ];
+        language-servers = [ "harper" "markdown-oxide" "lsp-ai" ];
       }
       {
         name = "nix";

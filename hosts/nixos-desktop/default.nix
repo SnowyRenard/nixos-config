@@ -8,6 +8,7 @@
     ../../system/app/steam.nix
     ../../system/app/gamemode.nix
     ../../system/app/jellyfin.nix
+    ../../system/app/ollama.nix
 
     ../../system/hardware/backlight.nix
 
@@ -36,7 +37,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "nixos-laptop";
+  networking.hostName = "nixos-desktop";
 
   networking.extraHosts = "0.0.0.0 modules-cdn.eac-prod.on.epicgames.com";
 
@@ -44,4 +45,5 @@
   time.timeZone = "Europe/Brussels";
 
   system.stateVersion = "25.05";
+  services.ollama.models = "/Vault/Models";
 }
