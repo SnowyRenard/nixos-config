@@ -11,7 +11,7 @@
 
       dynamicBoost.enable = true;
 
-      open = true;
+      open = false;
 
       nvidiaSettings = false;
     };

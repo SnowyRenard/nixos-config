@@ -8,6 +8,7 @@
     ../../system/app/steam.nix
     ../../system/app/gamemode.nix
     ../../system/app/jellyfin.nix
+    ../../system/app/kanata.nix
 
     ../../system/hardware/bluetooth.nix
     ../../system/hardware/backlight.nix
@@ -44,9 +45,6 @@
 
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
-
-  # Nvidia Driver
-  hardware.nvidia.open =  true;
 
   system.stateVersion = "25.05";
 }
