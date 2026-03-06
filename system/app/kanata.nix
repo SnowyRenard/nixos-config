@@ -1,11 +1,4 @@
 {
-  boot.kernelModules = [ "uinput" ];
-  hardware.uinput.enable = true;
-
-  services.udev.extraRules = ''
-    KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
-  '';
- 
   services.kanata = {
     enable = true;
     keyboards = {
@@ -36,7 +29,7 @@
              cnr (layer-switch canary-angle)
            )
            (deflayer layers
-            _ @qwr @cnr lrld _ _ _ _ _ _ _
+            _ @qwr @cnr _ _ _ _ _ _ _ _
             _ _ _ _ _ _ _ _ _ _ _ _ _
             _ _ _ _ _ _ _ _ _ _ _
             _ _ _ _ _ _ _ _ _ _
