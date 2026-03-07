@@ -17,9 +17,13 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    kmonad = {
+      url = "github:kmonad/kmonad?dir=nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nur, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nur, kmonad, ... }: {
     nixosConfigurations.nixos-desktop = let
         username = "snowyrenard";
         specialArgs = { inherit username; };
@@ -64,6 +68,7 @@
 
               nixpkgs.overlays = [ nur.overlays.default ];
             }
+            kmonad.nixosModules.default
           ];
     };
       nixosConfigurations.alex-desktop= let

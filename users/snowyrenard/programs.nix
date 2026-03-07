@@ -25,6 +25,8 @@
       # Compilers
       gcc
       gnumake
+      gdb
+      valgrind
       zig
       rustup
       # Cargo
@@ -35,6 +37,9 @@
       man-pages
       hyperfine
       norminette
+      lmstudio
+      opencode
+      rocmPackages.rocm-smi
       # Git
       jujutsu
 

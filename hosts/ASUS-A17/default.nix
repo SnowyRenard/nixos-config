@@ -18,6 +18,7 @@
     
     ../../system/hardware/mesa.nix
     ../../system/hardware/nvidia.nix
+    ../../system/hardware/zsa.nix
 
     ../../system/security/firewall.nix
     ../../system/security/tailscale.nix

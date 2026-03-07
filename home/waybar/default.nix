@@ -82,8 +82,6 @@
       pulseaudio = {
         format = "{icon}";
         format-bluetooth = "{icon} {format_source}";
-        format-bluetooth-muted = " {icon} {format_source}";
-        format-muted = " {format_source}";
         format-icons = { default = [ "" "" "" ]; };
         tooltip-format = "{volume}%";
         on-click = "${pkgs.foot}/bin/footclient ${pkgs.wiremix}/bin/wiremix";

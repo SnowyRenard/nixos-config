@@ -8,9 +8,7 @@
     ../../system/app/steam.nix
     ../../system/app/gamemode.nix
     ../../system/app/jellyfin.nix
-    ../../system/app/ollama.nix
-
-    ../../system/hardware/backlight.nix
+    ../../system/app/kanata.nix
 
     ../../system/hardware/kernel.nix
     ../../system/hardware/time.nix
@@ -18,6 +16,7 @@
     ../../system/hardware/mesa.nix
     ../../system/hardware/lvm.nix
     ../../system/hardware/bluetooth.nix
+    ../../system/hardware/zsa.nix
 
     ../../system/security/firewall.nix
     ../../system/security/tailscale.nix
@@ -45,5 +44,4 @@
   time.timeZone = "Europe/Brussels";
 
   system.stateVersion = "25.05";
-  services.ollama.models = "/Vault/Models";
 }

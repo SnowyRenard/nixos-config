@@ -3,6 +3,7 @@
     enable = true;
     package = pkgs.ollama-rocm;
     openFirewall = true;
+    environmentVariables = { OLLAMA_CONTEXT_LENGTH = "65536"; };
   };
   services.open-webui = {
     enable = true;

@@ -15,6 +15,7 @@
     ../../system/hardware/dualsense.nix
     
     ../../system/hardware/mesa.nix
+    ../../system/hardware/zsa.nix
 
     ../../system/security/firewall.nix
     ../../system/security/tailscale.nix
