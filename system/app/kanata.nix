@@ -22,9 +22,9 @@
           )
           (deflayer canary-angle
             @grl 1 2 3 4 5 6 7 8 9 0 - = bspc
-            tab  w l y p k z x o u ; [ ] \
-            caps c r s t b f n e i a ' ret
-            lsft j v d g q m h / , . rsft
+            tab  w l y p b z f o u ' [ ] \
+            caps c r s t g m n e i a ; ret
+            lsft q j v d k x h / , . rsft
             @ctl _ _ _ _ _ @ctl
           )
           (deflayer control
