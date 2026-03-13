@@ -61,19 +61,20 @@
         command = "${typos-lsp}/bin/typos-lsp";
       };
 
-      language = [{
-        name = "rust";
-        language-servers = [ "harper" "typos" "rust-analyzer" ]; 
-      }
-      {
-        name = "markdown";
-        language-servers = [ "harper" "markdown-oxide" ];
-      }
-      {
-        name = "nix";
-        language-servers = [ "harper" "typos" "nixd" ];
-      }
-    ];
+      language = [
+        {
+          name = "rust";
+          language-servers = [ "harper" "typos" "rust-analyzer" ]; 
+        }
+        {
+          name = "markdown";
+          language-servers = [ "harper" "markdown-oxide" ];
+        }
+        {
+          name = "nix";
+          language-servers = [ "harper" "typos" "nixd" ];
+        }
+      ];
     };
   };
 }
