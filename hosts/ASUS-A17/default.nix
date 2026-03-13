@@ -44,6 +44,12 @@
     HandleLidSwitchDocked = "ignore";
   };
 
+  hardware.nvidia.prime = {
+    offload.enable = true;
+    nvidiaBusId = "PCI:1:0:0";
+    intelBusId = "PCI:35:0:0";
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Brussels";
 
