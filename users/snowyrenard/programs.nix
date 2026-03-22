@@ -74,7 +74,6 @@
       # Music
       ncspot
       # Jellyfin
-      jellyfin-mpv-shim
       jellyfin-desktop
   ];
 
