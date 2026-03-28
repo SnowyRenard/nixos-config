@@ -55,6 +55,7 @@
   };
 
   gtk = {
+    gtk4.theme = null;
     enable = true;
     iconTheme = {
       name = "Papirus";

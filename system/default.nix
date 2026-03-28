@@ -2,7 +2,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = ["networkmanager" "wheel" "input" "uinput" ];
+    extraGroups = ["networkmanager" "wheel" "input" "uinput" "video" "render" ];
     shell = pkgs.nushell;
   };
 
