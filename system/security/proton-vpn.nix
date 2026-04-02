@@ -2,5 +2,5 @@
   ...
 }: {
     networking.firewall.checkReversePath = false;
-    environment.systemPackages = with pkgs; [wireguard-tools protonvpn-gui];
+    environment.systemPackages = with pkgs; [wireguard-tools proton-vpn];
   }

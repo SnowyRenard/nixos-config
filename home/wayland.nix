@@ -39,7 +39,7 @@
             [
               (${wallust}/bin/wallust run $img --quiet -s | ignore; pkill waybar -SIGUSR2 | ignore),
               (${imagemagick}/bin/magick $img -gravity center -extent 1.005:1 ~/.cache/rofi.bmp),
-              (${swww}/bin/swww img $img),
+              (${awww}/bin/awww img $img),
             ] | par-each { $in }
           }
         ''
