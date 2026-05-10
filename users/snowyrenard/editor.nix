@@ -14,6 +14,7 @@
       markdown-oxide
       glsl_analyzer
       zls
+      clang-tools
 
       tree-sitter
       tree-sitter-grammars.tree-sitter-rust
@@ -21,6 +22,8 @@
       tree-sitter-grammars.tree-sitter-nix
       tree-sitter-grammars.tree-sitter-nu
       tree-sitter-grammars.tree-sitter-glsl
+      tree-sitter-grammars.tree-sitter-c
+      tree-sitter-grammars.tree-sitter-cpp
     ];
 
     settings = {
@@ -64,6 +67,14 @@
       };
 
       language = [
+        {
+          name = "c";
+          indent = { unit = "\t"; tab-width = 4;};
+        }
+        {
+          name = "cpp";
+          indent = { unit = "\t"; tab-width = 4;};
+        }
         {
           name = "rust";
           language-servers = [ "harper" "typos" "rust-analyzer" ]; 
