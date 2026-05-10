@@ -5,9 +5,9 @@
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 
   home.sessionVariables = {
-    SWWW_TRANSITION = "none";
+    AWWW_TRANSITION = "none";
   };
-  services.swww.enable = true;
+  services.awww.enable = true;
 
   home.packages = with pkgs; [
     (

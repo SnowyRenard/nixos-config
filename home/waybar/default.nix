@@ -5,7 +5,7 @@
 
     systemd = {
       enable = true;
-      target = "graphical-session.target";
+      targets = [ "graphical-session.target" ];
     };
 
     settings = [{
