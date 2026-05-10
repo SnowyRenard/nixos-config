@@ -5,9 +5,9 @@
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 
   home.sessionVariables = {
-    SWWW_TRANSITION = "none";
+    AWWW_TRANSITION = "none";
   };
-  services.swww.enable = true;
+  services.awww.enable = true;
 
   home.packages = with pkgs; [
     (
@@ -39,7 +39,7 @@
             [
               (${wallust}/bin/wallust run $img --quiet -s | ignore; pkill waybar -SIGUSR2 | ignore),
               (${imagemagick}/bin/magick $img -gravity center -extent 1.005:1 ~/.cache/rofi.bmp),
-              (${swww}/bin/swww img $img),
+              (${awww}/bin/awww img $img),
             ] | par-each { $in }
           }
         ''
@@ -55,6 +55,7 @@
   };
 
   gtk = {
+    gtk4.theme = null;
     enable = true;
     iconTheme = {
       name = "Papirus";
