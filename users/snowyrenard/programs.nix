@@ -50,6 +50,7 @@
       heroic
       xivlauncher
       prismlauncher
+      protonup-qt
       # Modding
       openmw
       (limo.override { withUnrar = true; })

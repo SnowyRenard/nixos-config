@@ -10,12 +10,6 @@
         kb_variant = ",canary";
         kb_options = "grp:alt_shift_toggle";
       };
-      monitorv2 = [
-        {
-          output = "HDMI-A-1";
-          mode = "highres";
-        }
-      ];
     };
   };
 }
