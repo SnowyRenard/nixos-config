@@ -85,6 +85,14 @@
     # PROTON_ENABLE_HDR = 1;
   };
 
+  services.jellyfin-mpv-shim = {
+    enable = true;
+    mpvConfig = {
+      target-colorspace-hint = "yes";
+      vo = "dmabuf-wayland";
+    };
+  };
+  
   programs = {
     btop = {
       enable = true;
