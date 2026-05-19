@@ -5,7 +5,6 @@
     ./editor.nix
     ./browser.nix
     ./programs.nix
-    ./hyprland.nix
   ];
 
   i18n.inputMethod = {

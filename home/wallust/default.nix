@@ -1,4 +1,5 @@
 {
+  config,
   ...
 }: {
   programs.wallust = {
@@ -16,7 +17,7 @@
 
       templates = {
         dir.template = ./templates;
-        dir.target = "~/.cache/wallust";
+        dir.target = "${config.xdg.cacheHome}/wallust";
       };
     };
   };

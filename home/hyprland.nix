@@ -8,112 +8,162 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
+    configType = "lua";
+
     # App settings
-    settings = {
-      "$mod" = "SUPER";
+    extraConfig = /*lua*/ ''
+      local terminal = os.getenv("TERMINAL")
+      local browser = os.getenv("BROWSER")
+      local drun = "rofi -show drun"
 
-      exec-once = [
-        "hyprctl setcursor Bibata-Modern-Classic 16"
-        "sleep 5s; swww_randomize ~/Pictures/Backgrounds/Art/ 300sec"
-      ];
+      --require("${config.xdg.cacheHome}/wallust/hypr-colors")
 
-      source = [
-        "${config.xdg.cacheHome}/wallust/hypr-colors.conf"
-        "~/Pictures/Backgrounds/background.conf"
-      ];
-
-      input.follow_mouse = 2;
-  
-      general = {
-        gaps_in = 5;
-        gaps_out = 10;
-        border_size = 3;
-        "col.active_border" = "rgb($color10)";
-        "col.inactive_border" = "rgba(ffffffbb)";
-
-        layout = "dwindle";
-
-        allow_tearing = true;
-      };
-
-      decoration = {
-        rounding = 10;
-
-        blur = {
-          enabled = true;
-          size = 2;
-          passes = 1;
-          new_optimizations = "on";
-
-        };
-
-        shadow = {
-          enabled = true;
-          range = 4;
-          render_power = 3;
-          color = "rgba(1a1a1aee)";
-        };
-      };
-
-      monitorv2 = [
-        {
-          output = "";
-          mode = "highrr";
-          scale = 1;
-          bitdepth = 10;
+      hl.config({
+        dwindle = {
+          preserve_split = true,
         }
-      ];
+      })
 
-      bind = [
-        "$mod, W, exec, $browser"
-        "$mod, D, exec, $drun"
-        "$mod, T, exec, $terminal"
-        "$mod, Return, exec, $terminal"
+      -------------
+      -- MONITOR --
+      -------------
+      hl.monitor({
+        output = "",
+        mode = "highrr",
+        scale = 1,
+      })
 
-        "$mod SHIFT, Q, killactive"
-        "$mod SHIFT, E, exit"
+      -------------------
+      -- LOOK AND FEEL --
+      -------------------
+      hl.env("XCURSOR_SIZE", 16)
+      hl.env("HYPRCURSOR_SIZE", 16)
 
-        "$mod SHIFT, F, fullscreen"
-        "$mod, F, fullscreen , 1"
-        "$mod, N, togglefloating"
-        "$mod, V, togglesplit"
+      hl.on("hyprland.start", function()
+        hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic 16")
+        hl.exec_cmd("sleep 5s; swww_randomize ~/Pictures/Backgrounds/Art/ 309sec")
+      end)
+    
+      hl.config({
+        general ={
+          gaps_in = 5,
+          gaps_out = 10,
 
-        "$mod, left,	movefocus, l"
-		    "$mod, right,	movefocus, r"
-		    "$mod, up,	movefocus, u"
-		    "$mod, down,	movefocus, d"
+          border_size = 3,
 
-		    "$mod, H,	movefocus, l"
-		    "$mod, L,	movefocus, r"
-		    "$mod, K,	movefocus, u"
-		    "$mod, J,	movefocus, d"
+          layout = "dwindle",
+        },
 
-		    "$mod SHIFT, left,	movewindow, l"
-		    "$mod SHIFT, right,	movewindow, r"
-		    "$mod SHIFT, up,	movewindow, u"
-		    "$mod SHIFT, down,	movewindow, d"
+        decoration = {
+          rounding = 10,
+          col = {
+            --active_border = rgb(color10),
+            --inactive_border = rgba(ffffffbb),
+          },
 
-		    "$mod SHIFT, H,	movewindow, l"
-		    "$mod SHIFT, L,	movewindow, r"
-		    "$mod SHIFT, K,	movewindow, u"
-		    "$mod SHIFT, J,	movewindow, d"
-      ]
-      ++ (
-        # workspaces
-        builtins.concatLists (builtins.genList (i:
-          let ws = i + 1;
-          in [
-            "$mod, code:1${toString i}, workspace, ${toString ws}"
-            "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-          ]
-        )
-        9)
-      );
-      bindm = [
-		    "$mod, mouse:272, movewindow"
-		    "$mod, mouse:273, resizewindow"
-      ];
-    };
+          shadow = {
+            enabled = true,
+            range = 4,
+            render_power = 3,
+            color = 0xee1a1a1a,
+          },
+
+          blur = {
+            enabled = true,
+            size = 2,
+            passes = 1,
+          },
+        },
+
+        animations = {
+          enabled = true,
+        },
+      })
+
+      -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
+      hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
+      hl.curve("easeInOutCubic", { type = "bezier", points = { {0.65, 0.05}, {0.36, 1}    } })
+      hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}       } })
+      hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
+      hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
+
+      -- Default springs
+      hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+
+      hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
+      hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
+      hl.animation({ leaf = "windows",       enabled = true,  speed = 4.79, spring = "easy" })
+      hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 4.1,  spring = "easy",         style = "popin 87%" })
+      hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.49, bezier = "linear",       style = "popin 87%" })
+      hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "almostLinear" })
+      hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "almostLinear" })
+      hl.animation({ leaf = "fade",          enabled = true,  speed = 3.03, bezier = "quick" })
+      hl.animation({ leaf = "layers",        enabled = true,  speed = 3.81, bezier = "easeOutQuint" })
+      hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "fade" })
+      hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear",       style = "fade" })
+      hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
+      hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
+      hl.animation({ leaf = "workspaces",    enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
+      hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, bezier = "almostLinear", style = "fade" })
+      hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
+      hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
+
+      -----------
+      -- INPUT --
+      -----------
+      hl.config({
+        input = {
+          follow_mouse = 2,
+        },
+      })
+
+      local mod = "SUPER"
+
+      hl.bind(mod .. " + W", hl.dsp.exec_cmd(browser))
+      hl.bind(mod .. " + D", hl.dsp.exec_cmd(drun))
+      hl.bind(mod .. " + T", hl.dsp.exec_cmd(terminal))
+      hl.bind(mod .. " + Return", hl.dsp.exec_cmd(terminal))
+
+      local closeWindow = hl.bind(mod .. " + SHIFT + Q", hl.dsp.window.close())
+      hl.bind(mod .. " + SHIFT + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+
+      hl.bind(mod .. " + N", hl.dsp.window.float({ action = "toggle" }))
+      -- hl.bind(mod .. " + V", hl.dsp.layout(togglesplit))
+
+      hl.bind(mod .. " + left",  hl.dsp.focus({ direction = "left" }))
+      hl.bind(mod .. " + right", hl.dsp.focus({ direction = "right" }))
+      hl.bind(mod .. " + up",    hl.dsp.focus({ direction = "up" }))
+      hl.bind(mod .. " + down",  hl.dsp.focus({ direction = "down" }))
+
+      for i = 1, 9 do
+        hl.bind(mod .. " + " .. i, hl.dsp.focus({ workspace = i }))
+        hl.bind(mod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
+      end
+
+      hl.bind(mod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
+      hl.bind(mod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+
+      hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+      hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+      ----------------
+      -- WORKSPACES --
+      ----------------
+      hl.window_rule({
+        -- Fix some dragging issues with XWayland
+        name  = "fix-xwayland-drags",
+        match = {
+          class      = "^$",
+          title      = "^$",
+          xwayland   = true,
+          float      = true,
+          fullscreen = false,
+          pin        = false,
+        },
+
+        no_focus = true,
+      })
+    '';
   };
 
   programs.hyprlock = {
